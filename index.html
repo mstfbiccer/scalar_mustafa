@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+    <title>Scalar</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style type="text/css">
+    body,div,a,p,li,ul,ol,input,span,hr{
+      background: none;
+      border:none;
+      margin: 0px;
+      padding: 0px;
+      color: none;
+      list-style: none;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+     color:#AEA79F;
+      text-decoration: none;
+      user-select: none;
+      -o-user-select:none;
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+    }
+    input[type="text"], input[type="password"], textarea, select { 
+  outline: none;
+}
+  #desktop {
+      background: url(bg.jpg);
+      width: 1366px;
+      height: 768px;
+      display: block;
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+  }
+  #desktop #generic-menu{
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+    #desktop #generic-menu li{
+      float: left;
+     cursor: pointer;
+     opacity: 0.6;
+     padding: 5px;
+  }
+      #desktop #generic-menu li:hover{
+        background: rgba(255,255,255,0.9);
+        color: #806678;
+        opacity: 1;
+  }
+  #desktop #generic-menu #generic-time{
+    font-size: 42px;
+  }
+
+  #generic-search input{
+    height: 42px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 14px;
+    width: 900px;
+    padding: 0 10px;
+
+    background: rgba(255,255,255,0.5);
+  }
+    #generic-search input:hover{
+  }
+     input:focus {
+        border: 1px solid #806678;
+    }
+
+  #generic-search input:focus{
+    background: rgba(255,255,255,0.9);
+    box-shadow: none;
+  }
+  #browser{
+    background: #fff;
+    width: 99%;
+    left: .5%;
+    height: 690px;
+    position: absolute;
+    top: 70px;
+    border:1px solid #ccc;
+  }
+  #generic-dock{
+    width: 100%;
+    height: 55px;
+    background: red;
+    position: absolute;
+    bottom: 0px;
+    background: rgba(0,0,0,0.1);
+    border-top: 2px solid rgba(150,150,150,0.2);
+  }
+  #generic-dock ul li {
+        width: 48px;
+    height: 48px;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    padding: 7px 7px 0 0;
+  }
+    body
+    </style>
+    <script type="text/javascript">
+
+
+
+    window.system = new Object();
+    window.system.time = new Date();
+
+    var exec = require('child_process').exec;
+
+    function execute(command, callback) {
+      exec(command, function(error, stdout, stderr) {
+        callback(stdout);
+      });
+    };
+
+    // call the function
+    execute('ls', function(output) {
+      console.log(output);
+    });
+    execute('date "+%H:%M"',function(output){
+      document.getElementById('generic-time').innerHTML = output;
+    });
+    execute('date "+%H:%M"',function(output){
+      document.getElementById('generic-time').innerHTML = output;
+    });
+
+    execute('ICON_THEME=$(gsettings get org.gnome.desktop.interface icon-theme | tr -d "\'")&&echo ${ICON_THEME}',function(output){
+      window.ICON_THEME = output.replace("/g'/g",'').trim();
+    });
+
+    for(var i =0;i<document.querySelectorAll('#generic-dock ul li').length;i++){
+      document.querySelectorAll('#generic-dock ul li')[i].style.background = "url('/usr/share/icons/"+window.ICON_THEME+"/apps/48/"+document.querySelectorAll('#generic-dock ul li')[i].getAttribute("data-com")+".svg') no-repeat center";
+    }
+    </script>
+    </head>
+    <body>
+    <div id="desktop">
+    <div id="generic-search">
+      <input type="text" name="" placeholder="Bilgisayarımda ara">
+    </div>
+    <ul id="generic-menu">
+      <li id="general-update">Güncelleştir</li>
+      <li id="generic-config">Ayarlar</li>
+      <li id="generic-time"></li>
+    </ul>
+    <div id="generic-dock">
+      <ul>
+        <li data-com="terminal"></li>
+        <li data-com="file-manager"></li>
+        <li data-com="chromium-browser"></li>
+        <li data-com="slack"></li>
+      </ul>
+    </div>
+    </div>
+    <div id="screen-info"></div>
+    </body>
+</html>
