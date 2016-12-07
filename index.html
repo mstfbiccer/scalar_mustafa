@@ -101,7 +101,27 @@
     float: left;
     padding: 7px 7px 0 0;
   }
-    body
+    #tmp-aplist{
+    background: #ccc;
+    width: 0px;
+    height: 640px;
+    top: 65px;
+    position: absolute;
+    padding-right:10px;
+    overflow: hidden;
+    }
+    #tmp-aplist:hover{
+    width: 465px;
+
+    overflow: auto;
+    }
+    #tmp-aplist div{
+    width: 48px;
+    height: 48px;
+    padding: 5px;
+    float: left;
+    cursor: pointer;
+    }
     </style>
     <script type="text/javascript">
 
@@ -171,6 +191,17 @@
             });
           }
         }
+      if(window.appInfo[i-1].NoDisplay != "true"){
+      var cdiv = document.createElement("div");
+      document.getElementById('tmp-aplist').appendChild(cdiv);
+      var cimage = document.createElement('img');
+      cdiv.appendChild(cimage);
+      cdiv.setAttribute('data-exec',window.appInfo[i-1].Exec);
+      cimage.setAttribute('src',"/usr/share/icons/"+window.ICON_THEME+"/apps/48/"+window.appInfo[i-1].Icon+".svg");
+      cdiv.onclick=function(){
+            execute(decodeURI(this.getAttribute('data-exec')),function(output){});
+      };
+      }
       }
     },10000)
 
@@ -180,6 +211,8 @@
     <div id="desktop">
     <div id="generic-search">
       <input type="text" name="" placeholder="Bilgisayarımda ara">
+    </div>
+    <div id="tmp-aplist">
     </div>
     <ul id="generic-menu">
       <li id="general-update">Güncelleştir</li>
