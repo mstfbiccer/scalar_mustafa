@@ -94,7 +94,15 @@
     border-top: 2px solid rgba(150,150,150,0.2);
   }
   #generic-dock ul li {
-        width: 48px;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    padding: 7px 7px 0 0;
+  }
+    #generic-dock ul li img {
+    width: 48px;
     height: 48px;
     cursor: pointer;
     display: inline-block;
@@ -222,10 +230,10 @@
     </ul>
     <div id="generic-dock">
       <ul>
-        <li data-com="terminal"></li>
-        <li data-com="file-manager"></li>
-        <li data-com="chromium-browser"></li>
-        <li data-com="slack"></li>
+        <li data-com="terminal"><img src="icons/terminal_icon.ico"></li>
+        <li data-com="file-manager"><img src="icons/filemanager_icon.png"></li>
+        <li data-com="chromium-browser"><img src="icons/chromium_icon.ico"></li>
+        <li data-com="slack"><img src="icons/slack_icon.png"></li>/
       </ul>
     </div>
     </div>
