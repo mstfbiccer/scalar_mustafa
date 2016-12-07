@@ -124,9 +124,6 @@
     }
     </style>
     <script type="text/javascript">
-
-
-
     window.system = new Object();
     window.system.time = new Date();
 
@@ -142,69 +139,73 @@
     execute('ls', function(output) {
       console.log(output);
     });
-    execute('date "+%H:%M"',function(output){
+    execute('date "+%H:%M"', function(output) {
       document.getElementById('generic-time').innerHTML = output;
     });
-    execute('date "+%H:%M"',function(output){
+    execute('date "+%H:%M"', function(output) {
       document.getElementById('generic-time').innerHTML = output;
     });
+    setInterval(function(){
+      execute('date "+%H:%M"', function(output) {
+        document.getElementById('generic-time').innerHTML = output;
+      });
+    },60000);
+    execute('ICON_THEME=$(gsettings get org.gnome.desktop.interface icon-theme | tr -d "\'")&&echo ${ICON_THEME}', function(output) {
+      window.ICON_THEME = output.replace("/g'/g", '').trim();
+    });
+    setTimeout(function() {
+      for (var i = 0; i < document.querySelectorAll('#generic-dock ul li').length; i++) {
+        document.querySelectorAll('#generic-dock ul li')[i].style.background = "url('/usr/share/icons/" + window.ICON_THEME + "/apps/48/" + document.querySelectorAll('#generic-dock ul li')[i].getAttribute("data-com") + ".svg') no-repeat center";
+      }
+    }, 1000);
 
-    execute('ICON_THEME=$(gsettings get org.gnome.desktop.interface icon-theme | tr -d "\'")&&echo ${ICON_THEME}',function(output){
-      window.ICON_THEME = output.replace("/g'/g",'').trim();
-    });
-    setTimeout(function(){
-    for(var i =0;i<document.querySelectorAll('#generic-dock ul li').length;i++){
-      document.querySelectorAll('#generic-dock ul li')[i].style.background = "url('/usr/share/icons/"+window.ICON_THEME+"/apps/48/"+document.querySelectorAll('#generic-dock ul li')[i].getAttribute("data-com")+".svg') no-repeat center";
+    String.prototype.replaceAll = function(str1, str2, ignore) {
+      return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g, "\\$&"), (ignore ? "gi" : "g")), (typeof(str2) == "string") ? str2.replace(/\$/g, "$$$$") : str2);
     }
-},1000);
 
-      String.prototype.replaceAll = function(str1, str2, ignore) 
-      {
-          return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
-      } 
+    window.appInfo = new Array();
 
-      window.appInfo = new Array();
-
-      window.applist = new Array();
-    setTimeout(function(){
-    execute('cd /usr/share/applications && for f in *.desktop;do grep . $f;done',function(output){window.applist = output.split('[Desktop Entry]')});
-    window.applist.slice(2,window.applist.length);
-    },1000);
-    setTimeout(function(){
-      for(var i =1;i< window.applist.length;i++){
+    window.applist = new Array();
+    setTimeout(function() {
+      execute('cd /usr/share/applications && for f in *.desktop;do grep . $f;done', function(output) {
+        window.applist = output.split('[Desktop Entry]')
+      });
+      window.applist.slice(2, window.applist.length);
+    }, 1000);
+    setTimeout(function() {
+      for (var i = 1; i < window.applist.length; i++) {
         var app = applist[i].trim().replace(/(?:\r\n|\r|\n)/g, ',');
         app = app.replace(/(?:\r\n|\r|\n)/g, ',');
-        window.applist[i] = app.replaceAll('=',':').replaceAll("'",'').replaceAll('"','').replaceAll("#",'//').replaceAll("[",'').replaceAll("]",'');
+        window.applist[i] = app.replaceAll('=', ':').replaceAll("'", '').replaceAll('"', '').replaceAll("#", '//').replaceAll("[", '').replaceAll("]", '');
 
-      var b = "";
-      for(var j=0;j<window.applist[i].split(',').length;j++){
-        b = b + '"'+window.applist[i].split(',')[j].split(":")[0]+'"'+":"+('"'+encodeURI(window.applist[i].split(',')[j].split(":")[1])+'"')+","
-      }       
-      b = b.slice(b,b.length-1);
-      var a =("{"+b+"}");
-      window.appInfo.push(JSON.parse(a));
+        var b = "";
+        for (var j = 0; j < window.applist[i].split(',').length; j++) {
+          b = b + '"' + window.applist[i].split(',')[j].split(":")[0] + '"' + ":" + ('"' + encodeURI(window.applist[i].split(',')[j].split(":")[1]) + '"') + ","
+        }
+        b = b.slice(b, b.length - 1);
+        var a = ("{" + b + "}");
+        window.appInfo.push(JSON.parse(a));
 
-        window.appInfo[i-1].__proto__ = {
-          exec: function(){
-            execute(decodeURI(this.Exec),function(output){
+        window.appInfo[i - 1].__proto__ = {
+          exec: function() {
+            execute(decodeURI(this.Exec), function(output) {
 
             });
           }
         }
-      if(window.appInfo[i-1].NoDisplay != "true"){
-      var cdiv = document.createElement("div");
-      document.getElementById('tmp-aplist').appendChild(cdiv);
-      var cimage = document.createElement('img');
-      cdiv.appendChild(cimage);
-      cdiv.setAttribute('data-exec',window.appInfo[i-1].Exec);
-      cimage.setAttribute('src',"/usr/share/icons/"+window.ICON_THEME+"/apps/48/"+window.appInfo[i-1].Icon+".svg");
-      cdiv.onclick=function(){
-            execute(decodeURI(this.getAttribute('data-exec')),function(output){});
-      };
+        if (window.appInfo[i - 1].NoDisplay != "true") {
+          var cdiv = document.createElement("div");
+          document.getElementById('tmp-aplist').appendChild(cdiv);
+          var cimage = document.createElement('img');
+          cdiv.appendChild(cimage);
+          cdiv.setAttribute('data-exec', window.appInfo[i - 1].Exec);
+          cimage.setAttribute('src', "/usr/share/icons/" + window.ICON_THEME + "/apps/48/" + window.appInfo[i - 1].Icon + ".svg");
+          cdiv.onclick = function() {
+            execute(decodeURI(this.getAttribute('data-exec')), function(output) {});
+          };
+        }
       }
-      }
-    },10000)
-
+    }, 10000)
     </script>
     </head>
     <body>
