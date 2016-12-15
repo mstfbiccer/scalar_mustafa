@@ -64,10 +64,3 @@ scalar.lib = {
 scalar.init.config = {};
 
 scalar.init(scalar.lib.UI);
-scalar.init(scalar.lib.COMPONENT);
-scalar.init(scalar.lib.DESKTOP);
-scalar.init(scalar.lib.DOCK);
-scalar.init(scalar.lib.CALENDAR);
-scalar.init(scalar.lib.SEARCH);
-scalar.init(scalar.lib.WIDGET);
-scalar.init(scalar.lib.WINDOW);

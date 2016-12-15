@@ -25,7 +25,7 @@ scalar = function() {
 }
 scalar.prototype = {
   /**
-   * Initialization com/core/init/core.init.js
+   * Initialize com/core/init/core.init.js
    * @return {bool} 
    */
   _init: function() {
