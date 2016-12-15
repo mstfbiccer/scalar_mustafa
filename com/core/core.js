@@ -13,7 +13,6 @@ scalar = function() {
 
     document.createElement(this.selector.DOCUMENT.HEAD);
     document.createElement(this.selector.DOCUMENT.BODY);
-
     this._init();
 
     this.log.success.push('Initialization complete : [../Scalar/com/core/core.js]');
