@@ -3,33 +3,227 @@
   <head>
   <title>Scalar</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="../Scalar/Stylesheets/general.css">
+  <link rel="stylesheet" type="text/css" href="font.css">
+  <style type="text/css">
+    /*Core*/
+    body,div,a,p,li,ul,ol,input,span,hr{
+      background: none;
+      border:none;
+      margin: 0px;
+      padding: 0px;
+      color: none;
+      list-style: none;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+     color:#333333;
+      text-decoration: none;
+      user-select: none;
+      -o-user-select:none;
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+    }
+    input[type="text"], input[type="password"], textcontent, select { 
+      outline: none;
+    }
+    /*
+    Orange:#EB6536;
+    Grey:#B6AFA8;
+    Black:#333333;
+    */
+    /*desktop*/
+    #desktop{
+       width: 1920px;
+      height: 1080px;
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #wave{
+      height: 5%;
+      width: 100%;
+      background: -webkit-linear-gradient(top, #b6afa8 0%,#a09a94 100%);
+      position: relative;
+      border-bottom: 1px solid rgba(0,0,0,0.5);
+    }
+
+      #wave #menu{
+    display: inline-block;
+    position: relative;
+    float: right;
+    top: 15%;
+    z-index: 9;
+    width: 35%;
+    height: 35px;
+      }
+        #wave #menu li{
+          float: right;
+          margin-right: 2.1%;
+          top: 0;
+          width: 6%;
+          height: 100%;
+          position: relative;
+          font-size: 21px;
+          text-align: center;
+          cursor: pointer;
+        }
+          #wave #menu li:hover{
+            background: rgba(255,255,255,0.5);
+            border-radius: 2px;
+          }
+            #wave #menu li div{
+              font-size: 100%;
+              color: #666666;
+              
+          line-height: 35px;
+            }
+              #wave #menu li:hover div{
+                color: #555555
+              }
+        #wave #menu #calendar{
+          width: 18%;
+          height: 100%;
+          background: rgba(0,0,0,0.5);
+          border-radius: 2px;
+          color: #B6AFA8;
+          position: relative;
+        }
+          #wave #menu #calendar #weather{
+            float: right;
+            font-size: 105%;
+            padding-right: 10%;
+            color: rgba(255,255,255,0.9);
+            line-height: 35px;
+          }
+          #wave #menu #calendar #time{
+            color: #B6AFA8;
+            font-size: 120%;
+            width: inherit;
+            float: left;
+            padding-left: 5%;
+            line-height: 35px
+          }
+  
+      #wave #search{
+        width: 45%;
+        height: 70%;
+        left: 0.5%;
+        top: 16%;
+        position: absolute;
+        background : rgba(255,255,255,0.2);
+        border-radius: 2px;
+        padding-left:7px;
+        color: #666666;
+        letter-spacing: 0.4px;
+      }
+        #wave #search:focus{
+          background: rgba(255,255,255,0.3);
+        }
+        #wave #search:focus{
+          background: rgba(255,255,255,0.5);
+        }
+
+  #widget-container{
+    width: 100%;
+    height: 100%;
+    background: #999;
+    position: absolute;
+  }
+
+  #widget-container .content{
+    width: 30%;
+    height: 65%;
+    background: green;
+    float: left;
+    margin-right: 2.3%;
+    margin-top: 4.5%;
+    opacity: 0.8;
+    position: relative;
+  }
+
+  #widget-container .content:first-child{
+    margin-left: 2.6%;
+  }
+
+  #widget-container .content:last-child{
+    margin-right: 2.6%;
+  }
+
+  #dock{
+    width: 100%;
+    height: 17%;
+    background: red;
+    position: absolute;
+    bottom: 0;
+  }
+
+   #dock div {
+    width: 10%;
+    height: 85%;
+    margin-right: 1%;
+    margin-top: 0.8%;
+    background: blue;
+    float: left;
+   }
+
+   #dock div:first-child {
+    margin-left: 1%;
+   }
+
+  </style>
   </head>
   <body>
-
     <div id="desktop">
-      <div id="top">
-        <div id="generic-search"></div>
-      <ul id="generic-menu">
-        <li id="generic-time"></li>
-        <li id="general-user"></li>
-        <li id="general-update"></li>
-        <li id="generic-config"></li>
-      </ul>
+      <div id="wave">
+        <input id="search" type="text" name="" placeholder="Bilgisayarımda ara">
+        <ul id="menu">
+          <li id="calendar">
+            <div id="time">11:50</div>
+            <div id="weather" class="icon-snowy5"></div>
+          </li>
+          <li id="power"><div class="icon-power_settings_new" ></div></li>
+          <li id="user"><div class="icon-person" ></div></li>
+          <li id="config"><div class="icon-settings" ></div></li>
+          <li id="update"><div class="icon-sync" ></div></li>
+        </ul>
       </div>
-      <div id="content">
-        <div class="area" id="left"></div>
-        <div class="area" id="mid"></div>
-        <div class="area" id="rigth"></div>
+      <div id="widget-container">
+        <div class="content" id="widget-0">
+          <h1>Title</h1>
+          <ul>
+            <li>
+              <a>Title mini</a>
+              <p>text</p>
+            </li>
+          </ul>
+        </div>
+        <div class="content" id="widget-1">
+          <h1>Title</h1>
+          <ul>
+            <li>
+              <a>Title mini</a>
+              <p>text</p>
+            </li>
+          </ul>
+        </div>
+        <div class="content" id="widget-2">
+          <h1>Title</h1>
+          <ul>
+            <li>
+              <a>Title mini</a>
+              <p>text</p>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div id="generic-dock">
-        <div class="big-icon"></div>
-        <div class="big-icon"></div>
-        <div class="big-icon"></div>
-        <div class="big-icon"></div>
-        <div class="big-icon"></div>
+      <div id="dock">
+        <div><span></span></div>
+        <div><span></span></div>
+        <div><span></span></div>
+        <div><span></span></div>
+        <div><span></span></div>
       </div>
     </div>
-
   </body>
 </html>
