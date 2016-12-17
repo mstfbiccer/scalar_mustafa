@@ -1,0 +1,11 @@
+{
+"kernel":{
+  "source":"http://www.fotomac.com.tr/rss/anasayfa.xml"
+},
+"ui":{
+  "title": "title",
+  "desc": "description",
+  "url": "link",
+  "author": "fanatik"
+}
+}

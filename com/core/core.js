@@ -6,6 +6,8 @@ scalar = function() {
   try {
     this.config = scalar.config;
     this.selector = scalar.selector;
+    this.xml = scalar.xml;
+    this.ui=scalar.ui;
 
     this.log = new Object();
     this.log.error = new Array();
@@ -59,5 +61,39 @@ scalar.selector = {
     BODY: 'body',
     HEAD: 'head'
   }
+}
+scalar.xml = {
+    fetch: function(xmlURL, config) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                scalarFetch(this, config);
+            }
+        }
+        xhttp.open("GET", xmlURL, true);
+        xhttp.send();
+
+        function scalarFetch(xml, config) {
+            try {
+                window.configInner = {
+                    'title': config.title,
+                    'desc': config.desc,
+                    'url': config.url,
+                    'author': config.author
+                };
+                window.xmlObj = [];
+                var xmlDoc = xml.responseXML;
+                for (var i = 0; i < xmlDoc.getElementsByTagName(configInner.title).length; i++) {
+                    xmlObj.push([{
+                        'name': xmlDoc.getElementsByTagName(configInner.title)[i].childNodes[0].nodeValue,
+                        'description': xmlDoc.getElementsByTagName(configInner.desc)[i].childNodes[0].nodeValue,
+                        'link': xmlDoc.getElementsByTagName(configInner.url)[i].childNodes[0].nodeValue
+                    }]);
+                }
+            } catch (err) {
+                scalar.log.error.push(err);
+            }
+        }
+    }
 }
 window.scalar = new scalar();
