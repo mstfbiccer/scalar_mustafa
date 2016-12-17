@@ -11,6 +11,7 @@ scalar = function() {
     this.json = scalar.json;
     this.location=scalar.location;
     this.weather=scalar.weather;
+    this.date=scalar.date;
 
     this.log = new Object();
     this.log.error = new Array();
@@ -64,6 +65,13 @@ scalar.selector = {
   DOCUMENT: {
     BODY: 'body',
     HEAD: 'head'
+  }
+}
+scalar.date= {
+  "msToDate":function(ms) {
+    var d = new Date(0); // The 0 there is the key, which sets the date to the epoch
+    var date = new Date(d.setUTCSeconds(ms));
+    return date;
   }
 }
 scalar.xml = {
