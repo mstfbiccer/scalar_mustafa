@@ -39,6 +39,11 @@ scalar.prototype = {
       this.log.error.push('Initialization rejected : [' + this.config.INIT.SRC + ']');
       return false;
     }
+  },
+  exec: function(command, callback) {
+    exec(command, function(error, stdout, stderr) {
+      callback(stdout);
+    });
   }
 }
 
