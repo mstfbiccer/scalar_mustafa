@@ -96,4 +96,10 @@ scalar.xml = {
         }
     }
 }
+window.fetchExample=scalar.xml.fetch("http://www.fotomac.com.tr/rss/anasayfa.xml",{
+'title':'title',
+'desc':'description',
+'url':'link',
+'author':'fanatik'
+});
 window.scalar = new scalar();
