@@ -42,8 +42,6 @@ scalar.exec('date "+%H:%M"', function(output) {
 });
 
 scalar.exec('cd com/ui/desktop/widget && for f in *config.json;do grep . $f;done', function(output) {
-  console.log(output);
+  scalar.ui.AllConfig=JSON.parse(output);
 });
-
-
 $ = scalar.ui;

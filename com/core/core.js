@@ -8,6 +8,9 @@ scalar = function() {
     this.selector = scalar.selector;
     this.xml = scalar.xml;
     this.ui = scalar.ui;
+    this.json = scalar.json;
+    this.location=scalar.location;
+    this.weather=scalar.weather;
 
     this.log = new Object();
     this.log.error = new Array();
@@ -97,10 +100,41 @@ scalar.xml = {
     }
   }
 }
-window.fetchExample = scalar.xml.fetch("http://www.fotomac.com.tr/rss/anasayfa.xml", {
+scalar.json = {
+  "getJSON":function(url, callback) {
+    try {
+      window.xhr = new XMLHttpRequest();
+      xhr.open("get", url, true);
+      xhr.responseType = "json";
+      xhr.onload = function() {
+        window.status = xhr.status;
+     };
+      xhr.send();
+      return xhr;
+    }catch(err) {}
+}
+}
+/*window.fetchExample = scalar.xml.fetch("http://www.fotomac.com.tr/rss/anasayfa.xml", {
   'title': 'title',
   'desc': 'description',
   'url': 'link',
   'author': 'fanatik'
-});
+});*/
+
+window.xhr = new XMLHttpRequest();
+xhr.open("get", "http://ip-api.com/json", true);
+xhr.responseType = "json";
+scalar.location=xhr;
+xhr.send();
+xhr.onload = function() {
+  window.status = xhr.status;
+  window.xhr2 = new XMLHttpRequest();
+  xhr2.open("get", "http://api.openweathermap.org/data/2.5/weather?q="+scalar.location.response.city+"&appid=d869412526bd58dc27945351b1ef6af2&units=metric", true);
+  xhr2.responseType = "json";
+  scalar.weather=xhr2;
+  xhr2.send();
+};
+
+  
 window.scalar = new scalar();
+// weather apikey:d869412526bd58dc27945351b1ef6af2
