@@ -1,0 +1,8 @@
+{
+"aa_haber_ajansi":{
+"source":"http://aa.com.tr/tr/rss/default?cat=guncel",
+"title": "title",
+"desc": "description",
+"url": "link",
+"image":"image"
+},
