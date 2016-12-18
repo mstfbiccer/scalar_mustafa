@@ -68,8 +68,16 @@ scalar.ui.append('body',scalar.ui.createElement('div',{'id':'desktop'}));
 
   scalar.ui.append('#desktop',scalar.ui.createElement('div',{'id':'dock'}));
     scalar.ui.append('#dock',scalar.ui.createElement('div',{'id':'dock-container'}));
-      scalar.ui.append('#dock-container',scalar.ui.createElement('span'));
-        scalar.ui.append('#dock-container span',scalar.ui.createElement('b'));
+      scalar.ui.append('#dock-container',scalar.ui.createElement('span',{'id':'dc-1'}));
+        scalar.ui.append('#dc-1',scalar.ui.createElement('b'));
+      scalar.ui.append('#dock-container',scalar.ui.createElement('span',{'id':'dc-2'}));
+        scalar.ui.append('#dc-2',scalar.ui.createElement('b'));
+      scalar.ui.append('#dock-container',scalar.ui.createElement('span',{'id':'dc-3'}));
+        scalar.ui.append('#dc-3',scalar.ui.createElement('b'));
+      scalar.ui.append('#dock-container',scalar.ui.createElement('span',{'id':'dc-4'}));
+        scalar.ui.append('#dc-4',scalar.ui.createElement('b'));
+      scalar.ui.append('#dock-container',scalar.ui.createElement('span',{'id':'dc-5'}));
+        scalar.ui.append('#dc-5',scalar.ui.createElement('b'));
 
 
 scalar.exec('date "+%H:%M"', function(output) {
