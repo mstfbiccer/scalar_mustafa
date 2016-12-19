@@ -29,6 +29,18 @@ scalar.ui.desktop.wave = function() {
       scalar.log.error.push('Weather update failed.');
     }
   }, 100);
+
+  scalar.ui.select('#power').onclick = function(){
+    alert("Electron 60 saniye içerisinde kapanıcak","Uyarı");
+    scalar.exec('shutdown',function(output){console.log(output)})
+  }
+  scalar.ui.select('#update').onclick = function(){
+    scalar.exec('cd tez/Scalar && git pull',function(output){
+      location.reload();
+      alert("Cihazınız güncelleştirildi.","Uyarı");
+    })
+
+  }
 }
 
 scalar.ui.desktop.wave.prototype = {
@@ -45,7 +57,7 @@ scalar.ui.desktop.wave.config = {
   },
   WEATHER: {
     SELECT: '#weather',
-    RELOAD: 5000
+    RELOAD: 60000
   }
 };
 scalar.ui.desktop.wave.prototype = {
