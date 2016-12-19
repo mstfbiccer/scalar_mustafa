@@ -43,7 +43,6 @@ scalar.ui.desktop.widget = function() {
           scalar.ui.desktop.widget.config.NEWSCONFIG.push(JSON.parse(output));
           for (j = scalar.ui.desktop.widget.config.NEWSCONFIG.length - 1; j < scalar.ui.desktop.widget.config.NEWSCONFIG.length; j++) {
             scalar.ui.desktop.widget.getNews(scalar.ui.desktop.widget.config.NEWSCONFIG[j].SOURCE, scalar.ui.desktop.widget.config.NEWSCONFIG[j].CONFIG);
-
           }
         });
       }
@@ -77,18 +76,20 @@ scalar.ui.desktop.widget.prototype = {
           }
 
           for (k = 0; k < scalar.ui.desktop.widget.news.length; k++) {
-            scalar.ui.append('#widget-0 ul', scalar.ui.createElement('li', {
-              'id': 'li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER
-            }));
-            scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER, scalar.ui.createElement('a', {
-              'href': "" + scalar.ui.desktop.widget.news[k].URL,
-              'target': '_blank'
-            }));
-            scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER + ' a', scalar.ui.desktop.widget.news[k].TITLE);
-            scalar.ui.desktop.widget.news[k].IMAGE ? scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER, scalar.ui.createElement('div')) : false;
-            scalar.ui.desktop.widget.news[k].IMAGE ? scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER + ' div', scalar.ui.createElement('img', {'src': scalar.ui.desktop.widget.news[k].IMAGE})) : false;
-            scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER, scalar.ui.createElement('p'));
-            scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER + ' p', scalar.ui.desktop.widget.news[k].DESCRIPTION);
+            if(scalar.ui.desktop.widget.news[k].TITLE){
+              scalar.ui.append('#widget-0 ul', scalar.ui.createElement('li', {
+                'id': 'li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER
+              }));
+              scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER, scalar.ui.createElement('a', {
+                'href': "" + scalar.ui.desktop.widget.news[k].URL,
+                'target': '_blank'
+              }));
+              scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER + ' a', scalar.ui.desktop.widget.news[k].TITLE);
+              scalar.ui.desktop.widget.news[k].IMAGE ? scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER, scalar.ui.createElement('div')) : false;
+              scalar.ui.desktop.widget.news[k].IMAGE ? scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER + ' div', scalar.ui.createElement('img', {'src': scalar.ui.desktop.widget.news[k].IMAGE})) : false;
+              scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER, scalar.ui.createElement('p'));
+              scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER + ' p', scalar.ui.desktop.widget.news[k].DESCRIPTION);
+            }
           }
 
 
