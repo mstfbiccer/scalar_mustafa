@@ -19,30 +19,26 @@ scalar.ui.desktop.wave = function() {
 
   var weatherControl = setInterval(function(){
     try {
-      console.log('Try get weather ???');
       if(scalar.ui.desktop.wave.getIp.weather.response.weather[0].description) {
-        console.log('We got weather !!!');
         scalar.ui.desktop.wave.weather();
         clearInterval(weatherControl);
+        
+        scalar.log.success.push('Weather updated.');
       }
-    }catch (err) {}
+    }catch (err) {
+      scalar.log.error.push('Weather update failed.');
+    }
   }, 100);
 }
-<<<<<<< HEAD
 
-
-
-=======
 scalar.ui.desktop.wave.prototype = {
 
 }
->>>>>>> e4531e037ee5bb163d24c8b03dacd8fa1b240144
 scalar.ui.desktop.wave.config = {
   LOCATION: {
     URL: "http://ip-api.com/json",
     API_KEY: "d869412526bd58dc27945351b1ef6af2"
   },
-<<<<<<< HEAD
   TIME: {
     SELECT: '#time',
     RELOAD: 60000
@@ -50,10 +46,6 @@ scalar.ui.desktop.wave.config = {
   WEATHER: {
     SELECT: '#weather',
     RELOAD: 5000
-=======
-  TIME:{
-    
->>>>>>> e4531e037ee5bb163d24c8b03dacd8fa1b240144
   }
 };
 scalar.ui.desktop.wave.prototype = {
@@ -158,7 +150,6 @@ scalar.ui.desktop.wave.prototype = {
         scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-weather3';
         break;
       }
-      console.log('RELOADED ~~');
     },this.config.WEATHER.RELOAD);
   }
 }
