@@ -27,6 +27,8 @@ scalar.ui.prototype = {
         Object.keys(this.attribute).indexOf("placeholder") >= 0 ? this.htmlElement.setAttribute("placeholder", this.attribute.placeholder) : undefined;
         Object.keys(this.attribute).indexOf("type") >= 0 ? this.htmlElement.setAttribute("type", this.attribute.type) : undefined;
         Object.keys(this.attribute).indexOf("target") >= 0 ? this.htmlElement.setAttribute("target", this.attribute.target) : undefined;
+        Object.keys(this.attribute).indexOf("scope") >= 0 ? this.htmlElement.setAttribute("scope", this.attribute.scope) : undefined;
+        Object.keys(this.attribute).indexOf("onlogin") >= 0 ? this.htmlElement.setAttribute("onlogin", this.attribute.onlogin) : undefined;
       }
     }
     return this.htmlElement;
