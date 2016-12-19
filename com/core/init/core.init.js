@@ -48,10 +48,10 @@ scalar.lib = {
     TYPE: "text/javascript",
     SRC: "../Scalar/com/ui/window/ui.window.js"
   },
-  CALENDAR: {
+  WAVE: {
     ELEMENT: 'script',
     TYPE: "text/javascript",
-    SRC: "../Scalar/com/ui/desktop/calendar/ui.desktop.calendar.js"
+    SRC: "../Scalar/com/ui/desktop/wave/ui.desktop.wave.js"
   },
   DOCK: {
     ELEMENT: 'script',
