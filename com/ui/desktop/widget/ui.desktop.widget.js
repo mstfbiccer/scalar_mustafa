@@ -21,7 +21,7 @@ scalar.ui.desktop.widget = function() {
     'class': 'content'
   }));
   scalar.ui.append('#widget-0', scalar.ui.createElement('h1'));
-  scalar.ui.select('#widget-0 h1').innerHTML = "Haberler";
+  scalar.ui.select('#widget-0 h1').innerHTML = "En Son Haberler";
   scalar.ui.append('#widget-0', scalar.ui.createElement('ul'));
   scalar.exec('cd com/ui/desktop/widget && for f in *list.json;do grep . $f ;done', function(output) {
     scalar.ui.select('#widget-0 ul').innerHTML = "";
