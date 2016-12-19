@@ -1,252 +1,217 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-    <title>HackedBy mstfbiccer</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <style type="text/css">
-    body,div,a,p,li,ul,ol,input,span,hr{
-      background: none;
-      border:none;
-      margin: 0px;
-      padding: 0px;
-      color: none;
-      list-style: none;
-      font-family: 'Roboto', sans-serif;
-      font-size: 14px;
-     color:#AEA79F;
-      text-decoration: none;
-      user-select: none;
-      -o-user-select:none;
-      -moz-user-select: none;
-      -khtml-user-select: none;
-      -webkit-user-select: none;
-    }
-    input[type="text"], input[type="password"], textarea, select { 
-  outline: none;
-}
-  #desktop {
-      background: url(bg.jpg);
-      width: 1366px;
-      height: 768px;
-      display: block;
-      margin: auto;
-      position: relative;
-      overflow: hidden;
-  }
-  #desktop #generic-menu{
-    display: inline-block;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-  }
-    #desktop #generic-menu li{
-      float: left;
+<head>
+<script type="text/javascript" src="com/core/core.js"></script>
+  <style type="text/css">
+    /*Core*/
+ 
+ body,div,a,p,li,ul,ol,input,span,hr {
+     background: none;
+     border: none;
+     margin: 0px;
+     padding: 0px;
+     color: none;
+     list-style: none;
+     font-family: 'Roboto', sans-serif;
+     font-size: 14px;
+     color: #333333;
+     text-decoration: none;
+     user-select: none;
+     -o-user-select: none;
+     -moz-user-select: none;
+     -khtml-user-select: none;
+     -webkit-user-select: none;
+ }
+ input[type="text"],input[type="password"],textcontent,select {
+     outline: none;
+ }
+ /*
+    Orange:#EB6536;
+    Grey:#B6AFA8;
+    Black:#333333;
+    */
+ /*desktop*/
+ 
+ #desktop {
+     width: 1920px;
+     height: 1080px;
+     display: block;
+     position: relative;
+     overflow: hidden;
+     background: url(./com/ui/background/bg.png);
+ }
+ #wave {
+     height: 50px;
+     width: 100%;
+     background: -webkit-linear-gradient(top, #b6afa8 0%, #a09a94 100%);
+     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+     position: relative;
+ }
+ #wave #menu {
+     display: inline-block;
+     position: relative;
+     float: right;
+     top: 15%;
+     z-index: 9;
+     width: 35%;
+     height: 75%;
+ }
+ #wave #menu li {
+     float: right;
+     margin-right: 5px;
+     width: 35px;
+     text-align: center;
      cursor: pointer;
+ }
+ #wave #menu li:hover {
+     background: rgba(255, 255, 255, 0.5);
+     border-radius: 2px;
+ }
+ #wave #menu li div {
+     font-size: 20px;
+     color: #666666;
+     line-height: 35px;
+ }
+ #wave #menu li:hover div {
+     color: #555555
+ }
+ #wave #menu #calendar {
+     width: 120px;
+     background: rgba(0, 0, 0, 0.5);
+     border-radius: 2px;
+     color: #B6AFA8;
+ }
+ #wave #menu #calendar #weather {
+     float: right;
+     font-size: 22px;
+     padding-right: 10px;
+     color: rgba(255, 255, 255, 0.9);
+     line-height: 35px;
+ }
+ #wave #menu #calendar #time {
+     color: #B6AFA8;
+     font-size: 25px;
+     float: left;
+     padding-left: 5px;
+     line-height: 35px;
+ }
+ #wave #search {
+     width: 45%;
+     height: 35px;
+     left: 5px;
+     top: 8px;
+     position: absolute;
+     background: rgba(255, 255, 255, 0.5);
+     border-radius: 2px;
+     padding-left: 7px;
+     color: #666666;
+     letter-spacing: 0.4px;
+ }
+ #widget-container {
+     width: 100%;
+     height: 850px;
+     position: absolute;
+ }
+ #widget-container .content {
+     width: 30%;
+     height: 80%;
+     background: rgba(255, 255, 255, 0.1);
+     float: left;
+     margin-right: 2.3%;
+     margin-top: 4.5%;
+     position: relative;
+     border-radius: 3px;
+ }
+ #widget-container .content:first-child {
+     margin-left: 2.6%;
+ }
+ #widget-container .content:last-child {
+     margin-right: 2.6%;
+ }
+ #dock {
+     width: 100%;
+     height: 180px;
+     background: #111111;
+     position: absolute;
+     bottom: 0;
+     text-align: center;
+     opacity: 0.7;
+ }
+ #dock span {
+     width: 150px;
+     height: 140px;
+     margin-right: 15px;
+     margin-top: 20px;
+     background: black;
+     float: left;
+     cursor: pointer;
+     border-top-left-radius: 10px 50%;
+     border-bottom-left-radius: 10px 50%;
+     border-top-right-radius: 10px 50%;
+     border-bottom-right-radius: 10px 50%;
+     overflow: hidden;
+     border: 1px solid rgba(255, 255, 255, 0.1);
+ }
+ #dock div:first-child {
+     margin-left: 20px;
+ }
+ #dock #dock-container {
+     display: inline-block;
+     margin: auto;
+ }
+ #dock span b {
+     width: 100%;
+     height: 100%;
+     display: block;
      opacity: 0.6;
-     padding: 5px;
-  }
-      #desktop #generic-menu li:hover{
-        background: rgba(255,255,255,0.9);
-        color: #806678;
-        opacity: 1;
-  }
-  #desktop #generic-menu #generic-time{
-    font-size: 42px;
-  }
+ }
+ #dock span b:hover {
+     background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 60%, rgba(255, 255, 255, 0.2) 100%);
+ }
+ .content h1 {
+     letter-spacing: 1.5px;
+     padding-left: 10px;
+     color: #fff;
+     text-align: center;
+ }
+ .content ul {
+     width: 100%;
+     height: 90%;
+     margin: auto;
+     border-radius: 3px;
+     background: #fff;
+     overflow: auto;
+ }
+ .content ul li {
+     padding: 10px;
+     overflow: hidden;
+     border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+ }
+ .content ul li div {
+     float: right;
+     height: 100px;
+     width: 100px;
+     position: relative;
+     margin-left: 10px;
+     margin-top: 10px;
+ }
+ .content ul li div img {
+     width: 100%;
+     height: auto;
+ }
+ .content ul li a {
+     font-size: 22px;
+     font-weight: bold;
+     letter-spacing: 0.5px;
+ }
+ .content ul li p {
+     margin-left: 15px;
+     padding-top: 5px;
+     color: #666;
+ }
+  </style>
+</head>
+<body>
 
-  #generic-search input{
-    height: 42px;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    font-size: 14px;
-    width: 900px;
-    padding: 0 10px;
-
-    background: rgba(255,255,255,0.5);
-  }
-    #generic-search input:hover{
-  }
-     input:focus {
-        border: 1px solid #806678;
-    }
-
-  #generic-search input:focus{
-    background: rgba(255,255,255,0.9);
-    box-shadow: none;
-  }
-  #browser{
-    background: #fff;
-    width: 99%;
-    left: .5%;
-    height: 690px;
-    position: absolute;
-    top: 70px;
-    border:1px solid #ccc;
-  }
-  #generic-dock{
-    width: 100%;
-    height: 55px;
-    background: red;
-    position: absolute;
-    bottom: 0px;
-    background: rgba(0,0,0,0.1);
-    border-top: 2px solid rgba(150,150,150,0.2);
-  }
-  #generic-dock ul li {
-    width: 48px;
-    height: 48px;
-    cursor: pointer;
-    display: inline-block;
-    float: left;
-    padding: 7px 7px 0 0;
-  }
-  #generic-dock ul li:hover {
-    bottom:5px;
-    position: relative;
-  }
-    #generic-dock ul li img:hover {
-    bottom:5px;
-    position: relative;
-  }
-    #generic-dock ul li img {
-    width: 48px;
-    height: 48px;
-    cursor: pointer;
-    display: inline-block;
-    float: left;
-    padding: 7px 7px 0 0;
-  }
-    #tmp-aplist{
-    background: #ccc;
-    width: 0px;
-    height: 640px;
-    top: 65px;
-    position: absolute;
-    padding-right:10px;
-    overflow: hidden;
-    }
-    #tmp-aplist:hover{
-    width: 465px;
-
-    overflow: auto;
-    }
-    #tmp-aplist div{
-    width: 48px;
-    height: 48px;
-    padding: 5px;
-    float: left;
-    cursor: pointer;
-    }
-    </style>
-    <script type="text/javascript">
-    window.system = new Object();
-    window.system.time = new Date();
-
-    var exec = require('child_process').exec;
-
-    function execute(command, callback) {
-      exec(command, function(error, stdout, stderr) {
-        callback(stdout);
-      });
-    };
-
-    // call the function
-    execute('ls', function(output) {
-      console.log(output);
-    });
-    execute('date "+%H:%M"', function(output) {
-      document.getElementById('generic-time').innerHTML = output;
-    });
-    execute('date "+%H:%M"', function(output) {
-      document.getElementById('generic-time').innerHTML = output;
-    });
-    setInterval(function(){
-      execute('date "+%H:%M"', function(output) {
-        document.getElementById('generic-time').innerHTML = output;
-      });
-    },60000);
-    execute('ICON_THEME=$(gsettings get org.gnome.desktop.interface icon-theme | tr -d "\'")&&echo ${ICON_THEME}', function(output) {
-      window.ICON_THEME = output.replace("/g'/g", '').trim();
-    });
-    setTimeout(function() {
-      for (var i = 0; i < document.querySelectorAll('#generic-dock ul li').length; i++) {
-        document.querySelectorAll('#generic-dock ul li')[i].style.background = "url('/usr/share/icons/" + window.ICON_THEME + "/apps/48/" + document.querySelectorAll('#generic-dock ul li')[i].getAttribute("data-com") + ".svg') no-repeat center";
-      }
-    }, 1000);
-
-    String.prototype.replaceAll = function(str1, str2, ignore) {
-      return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g, "\\$&"), (ignore ? "gi" : "g")), (typeof(str2) == "string") ? str2.replace(/\$/g, "$$$$") : str2);
-    }
-
-    window.appInfo = new Array();
-
-    window.applist = new Array();
-    setTimeout(function() {
-      execute('cd /usr/share/applications && for f in *.desktop;do grep . $f;done', function(output) {
-        window.applist = output.split('[Desktop Entry]')
-      });
-      window.applist.slice(2, window.applist.length);
-    }, 1000);
-    setTimeout(function() {
-      for (var i = 1; i < window.applist.length; i++) {
-        var app = applist[i].trim().replace(/(?:\r\n|\r|\n)/g, ',');
-        app = app.replace(/(?:\r\n|\r|\n)/g, ',');
-        window.applist[i] = app.replaceAll('=', ':').replaceAll("'", '').replaceAll('"', '').replaceAll("#", '//').replaceAll("[", '').replaceAll("]", '');
-
-        var b = "";
-        for (var j = 0; j < window.applist[i].split(',').length; j++) {
-          b = b + '"' + window.applist[i].split(',')[j].split(":")[0] + '"' + ":" + ('"' + encodeURI(window.applist[i].split(',')[j].split(":")[1]) + '"') + ","
-        }
-        b = b.slice(b, b.length - 1);
-        var a = ("{" + b + "}");
-        window.appInfo.push(JSON.parse(a));
-
-        window.appInfo[i - 1].__proto__ = {
-          exec: function() {
-            execute(decodeURI(this.Exec), function(output) {
-
-            });
-          }
-        }
-        if (window.appInfo[i - 1].NoDisplay != "true") {
-          var cdiv = document.createElement("div");
-          document.getElementById('tmp-aplist').appendChild(cdiv);
-          var cimage = document.createElement('img');
-          cdiv.appendChild(cimage);
-          cdiv.setAttribute('data-exec', window.appInfo[i - 1].Exec);
-          cimage.setAttribute('src', "/usr/share/icons/" + window.ICON_THEME + "/apps/48/" + window.appInfo[i - 1].Icon + ".svg");
-          cdiv.onclick = function() {
-            execute(decodeURI(this.getAttribute('data-exec')), function(output) {});
-          };
-        }
-      }
-    }, 10000)
-    </script>
-    </head>
-    <body>
-    <div id="desktop">
-    <h1>hackedBy mstfbiccer :) </h1>
-    <div id="generic-search">
-      <input type="text" name="" placeholder="Bilgisayarımda ara">
-    </div>
-    <div id="tmp-aplist">
-    </div>
-    <ul id="generic-menu">
-      <li id="general-update">Güncelleştir</li>
-      <li id="generic-config">Ayarlar</li>
-      <li id="generic-time"></li>
-    </ul>
-    <div id="generic-dock">
-      <ul>
-        <li data-com="terminal"></li>
-        <li data-com="file-manager"></li>
-        <li data-com="chromium-browser"></li>
-        <li data-com="slack"></li>/
-      </ul>
-    </div>
-    </div>
-    <div id="screen-info"></div>
-        <h1>hackedBy mstfbiccer :) </h1>
-    </body>
+</body>
 </html>

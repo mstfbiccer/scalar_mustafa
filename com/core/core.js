@@ -68,7 +68,7 @@ scalar.config = {
   INIT: {
     ELEMENT: 'script',
     TYPE: "text/javascript",
-    SRC: "../Scalar/com/core/init/core.init.js"
+    SRC: "com/core/init/core.init.js"
   }
 }
 scalar.selector = {

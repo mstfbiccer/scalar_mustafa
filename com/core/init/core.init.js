@@ -31,47 +31,47 @@ scalar.lib = {
   UI: {
     ELEMENT: 'script',
     TYPE: "text/javascript",
-    SRC: "../Scalar/com/ui/ui.js"
+    SRC: "com/ui/ui.js"
   },
   COMPONENT: {
     ELEMENT: 'script',
     TYPE: "text/javascript",
-    SRC: "../Scalar/com/ui/component/ui.component.js"
+    SRC: "com/ui/component/ui.component.js"
   },
   DESKTOP: {
     ELEMENT: 'script',
     TYPE: "text/javascript",
-    SRC: "../Scalar/com/ui/desktop/ui.desktop.js"
+    SRC: "com/ui/desktop/ui.desktop.js"
   },
   WINDOW: {
     ELEMENT: 'script',
     TYPE: "text/javascript",
-    SRC: "../Scalar/com/ui/window/ui.window.js"
+    SRC: "com/ui/window/ui.window.js"
   },
   WAVE: {
     ELEMENT: 'script',
     TYPE: "text/javascript",
-    SRC: "../Scalar/com/ui/desktop/wave/ui.desktop.wave.js"
+    SRC: "com/ui/desktop/wave/ui.desktop.wave.js"
   },
   DOCK: {
     ELEMENT: 'script',
     TYPE: "text/javascript",
-    SRC: "../Scalar/com/ui/desktop/dock/ui.desktop.dock.js"
+    SRC: "com/ui/desktop/dock/ui.desktop.dock.js"
   },
   SEARCH: {
     ELEMENT: 'script',
     TYPE: "text/javascript",
-    SRC: "../Scalar/com/ui/desktop/search/ui.desktop.search.js"
+    SRC: "com/ui/desktop/search/ui.desktop.search.js"
   },
   WIDGET: {
     ELEMENT: 'script',
     TYPE: "text/javascript",
-    SRC: "../Scalar/com/ui/desktop/widget/ui.desktop.widget.js"
+    SRC: "com/ui/desktop/widget/ui.desktop.widget.js"
   },
   UI_FONT: {
     ELEMENT: 'link',
     TYPE: "text/css",
-    SRC: "../Scalar/com/ui/stylesheet/font.css"
+    SRC: "com/ui/stylesheet/font.css"
   }
 }
 
