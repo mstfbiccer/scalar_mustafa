@@ -85,10 +85,8 @@ scalar.ui.desktop.widget.prototype = {
               'target': '_blank'
             }));
             scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER + ' a', scalar.ui.desktop.widget.news[k].TITLE);
-            scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER, scalar.ui.createElement('div'));
-            scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER + ' div', scalar.ui.createElement('img', {
-              'src': scalar.ui.desktop.widget.news[k].IMAGE
-            }));
+            scalar.ui.desktop.widget.news[k].IMAGE ? scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER, scalar.ui.createElement('div')) : false;
+            scalar.ui.desktop.widget.news[k].IMAGE ? scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER + ' div', scalar.ui.createElement('img', {'src': scalar.ui.desktop.widget.news[k].IMAGE})) : false;
             scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER, scalar.ui.createElement('p'));
             scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER + ' p', scalar.ui.desktop.widget.news[k].DESCRIPTION);
           }
