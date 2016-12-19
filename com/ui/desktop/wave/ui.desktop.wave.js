@@ -14,12 +14,15 @@ scalar.ui.desktop.wave = function() {
   };
 }
 scalar.ui.desktop.wave.prototype = {
-  
+
 }
 scalar.ui.desktop.wave.config = {
   LOCATION: {
     URL: "http://ip-api.com/json",
     API_KEY: "d869412526bd58dc27945351b1ef6af2"
+  },
+  TIME:{
+    
   }
 };
 scalar.ui.desktop.wave = new scalar.ui.desktop.wave();

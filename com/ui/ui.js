@@ -26,6 +26,7 @@ scalar.ui.prototype = {
         Object.keys(this.attribute).indexOf("href") >= 0 ? this.htmlElement.setAttribute("href", this.attribute.href) : undefined;
         Object.keys(this.attribute).indexOf("placeholder") >= 0 ? this.htmlElement.setAttribute("placeholder", this.attribute.placeholder) : undefined;
         Object.keys(this.attribute).indexOf("type") >= 0 ? this.htmlElement.setAttribute("type", this.attribute.type) : undefined;
+        Object.keys(this.attribute).indexOf("target") >= 0 ? this.htmlElement.setAttribute("target", this.attribute.target) : undefined;
       }
     }
     return this.htmlElement;
@@ -34,9 +35,13 @@ scalar.ui.prototype = {
     typeof element === 'object' ? document.querySelector(target).appendChild(element) : undefined;
     typeof element === 'string' || typeof element === 'number' || typeof element === 'number' ? document.querySelector(target).innerHTML = document.querySelector(target).innerHTML + element : undefined;
   },
-  select: function(query) {
+  selectAll: function(query) {
     this.query = query;
     return document.querySelectorAll(query)
+  },
+  select: function(query) {
+    this.query = query;
+    return document.querySelector(query)
   }
 };
 scalar.ui = new scalar.ui();
@@ -59,12 +64,6 @@ scalar.ui.append('body',scalar.ui.createElement('div',{'id':'desktop'}));
       scalar.ui.append('#menu',scalar.ui.createElement('li',{'id':'update'}));
         scalar.ui.append('#update',scalar.ui.createElement('div',{'class':'icon-sync'}));
 
-  scalar.ui.append('#desktop',scalar.ui.createElement('div',{'id':'widget-container'}));
-    scalar.ui.append('#widget-container',scalar.ui.createElement('div',{'id':'widget-0','class':'content'}));
-
-    scalar.ui.append('#widget-container',scalar.ui.createElement('div',{'id':'widget-1','class':'content'}));
-
-    scalar.ui.append('#widget-container',scalar.ui.createElement('div',{'id':'widget-2','class':'content'}));
 
   scalar.ui.append('#desktop',scalar.ui.createElement('div',{'id':'dock'}));
     scalar.ui.append('#dock',scalar.ui.createElement('div',{'id':'dock-container'}));
@@ -84,7 +83,4 @@ scalar.exec('date "+%H:%M"', function(output) {
   console.log(output);
 });
 
-scalar.exec('cd com/ui/desktop/widget && for f in *config.json;do grep . $f;done', function(output) {
-  scalar.ui.AllConfig=JSON.parse(output);
-});
 $ = scalar.ui;
