@@ -35,7 +35,7 @@ scalar.ui.desktop.wave = function() {
     scalar.exec('shutdown',function(output){console.log(output)})
   }
   scalar.ui.select('#update').onclick = function(){
-    scalar.exec('cd tez/Scalar && git pull',function(output){
+    scalar.exec('git pull',function(output){
       location.reload();
       alert("Cihazınız güncelleştirildi.","Uyarı");
     })
@@ -77,9 +77,9 @@ scalar.ui.desktop.wave.prototype = {
     switch (description) {
     case 'clear sky':
       scalar.exec('date "+%H:%M"', function(output) {
-        this.timeValue = parseInt(output.split(':')[0])
+        window.timeValue = parseInt(output.split(':')[0])
       });
-      if(this.timeValue < 7 && this.timeValue > 19) {
+      if(timeValue < 7 || timeValue > 17) {
         scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-moon';
       }else {
         scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-sun';
@@ -87,9 +87,9 @@ scalar.ui.desktop.wave.prototype = {
       break;
     case 'few clouds':
       scalar.exec('date "+%H:%M"', function(output) {
-        this.timeValue = parseInt(output.split(':')[0])
+        window.timeValue = parseInt(output.split(':')[0])
       });
-      if(this.timeValue < 7 && this.timeValue > 19) {
+      if(timeValue < 7 || timeValue > 17) {
         scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-cloud';
       }else {
         scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-cloudy';
@@ -122,9 +122,9 @@ scalar.ui.desktop.wave.prototype = {
       switch (description) {
       case 'clear sky':
         scalar.exec('date "+%H:%M"', function(output) {
-          this.timeValue = parseInt(output.split(':')[0])
+          window.timeValue = parseInt(output.split(':')[0])
         });
-        if(this.timeValue < 7 && this.timeValue > 19) {
+        if(timeValue < 7 || timeValue > 17) {
           scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-moon';
         }else {
           scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-sun';
@@ -132,9 +132,9 @@ scalar.ui.desktop.wave.prototype = {
         break;
       case 'few clouds':
         scalar.exec('date "+%H:%M"', function(output) {
-          this.timeValue = parseInt(output.split(':')[0])
+          window.timeValue = parseInt(output.split(':')[0])
         });
-        if(this.timeValue < 7 && this.timeValue > 19) {
+        if(timeValue < 7 || timeValue > 17) {
           scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-cloud';
         }else {
           scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-cloudy';
