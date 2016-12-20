@@ -15,7 +15,6 @@ scalar.ui.desktop.widget = function() {
     'id': 'widget-1',
     'class': 'content'
   }));
-  this.getFacebook();
   scalar.ui.append('#widget-1', scalar.ui.createElement('fb:login-button', {
     'scope': 'public_profile,email',
     'onlogin': 'checkLoginState();'
@@ -27,11 +26,17 @@ scalar.ui.desktop.widget = function() {
   scalar.exec('cd com/ui/desktop/widget && for f in *list.json;do grep . $f ;done', function(output) {
     scalar.ui.select('#widget-0 ul').innerHTML = "";
     scalar.ui.desktop.widget.list = JSON.parse(output);
+
+    scalar.ui.desktop.widget.config.NEWS.XML_POINTER = 0;
     for (i = 0; i < scalar.ui.desktop.widget.list.SOURCE.length; i++) {
       scalar.exec('cd com/ui/desktop/widget && for f in ' + scalar.ui.desktop.widget.list.SOURCE[i] + ';do grep . $f ;done', function(output) {
         scalar.ui.desktop.widget.config.NEWSCONFIG.push(JSON.parse(output));
         for (j = scalar.ui.desktop.widget.config.NEWSCONFIG.length - 1; j < scalar.ui.desktop.widget.config.NEWSCONFIG.length; j++) {
-          scalar.ui.desktop.widget.getNews(scalar.ui.desktop.widget.config.NEWSCONFIG[j].SOURCE, scalar.ui.desktop.widget.config.NEWSCONFIG[j].CONFIG);
+          scalar.exec('cd com/ui/desktop/widget && wget --output-document=feed_' + j + '.xml ' + scalar.ui.desktop.widget.config.NEWSCONFIG[j].SOURCE + '&&  grep . feed_' + j + '.xml', function(output2) {
+
+            scalar.ui.desktop.widget.getNews('com/ui/desktop/widget/feed_' + scalar.ui.desktop.widget.config.NEWS.XML_POINTER + '.xml', scalar.ui.desktop.widget.config.NEWSCONFIG[scalar.ui.desktop.widget.config.NEWS.XML_POINTER].CONFIG);
+            scalar.ui.desktop.widget.config.NEWS.XML_POINTER++;
+          });
 
         }
       });
@@ -39,11 +44,17 @@ scalar.ui.desktop.widget = function() {
     setInterval(function() {
       scalar.ui.select('#widget-0 ul').innerHTML = "";
       scalar.ui.desktop.widget.list = JSON.parse(output);
+      scalar.ui.desktop.widget.config.NEWS.XML_POINTER = 0;
       for (i = 0; i < scalar.ui.desktop.widget.list.SOURCE.length; i++) {
         scalar.exec('cd com/ui/desktop/widget && for f in ' + scalar.ui.desktop.widget.list.SOURCE[i] + ';do grep . $f ;done', function(output) {
           scalar.ui.desktop.widget.config.NEWSCONFIG.push(JSON.parse(output));
           for (j = scalar.ui.desktop.widget.config.NEWSCONFIG.length - 1; j < scalar.ui.desktop.widget.config.NEWSCONFIG.length; j++) {
-            scalar.ui.desktop.widget.getNews(scalar.ui.desktop.widget.config.NEWSCONFIG[j].SOURCE, scalar.ui.desktop.widget.config.NEWSCONFIG[j].CONFIG);
+            scalar.exec('cd com/ui/desktop/widget && wget --output-document=feed_' + j + '.xml ' + scalar.ui.desktop.widget.config.NEWSCONFIG[j].SOURCE + '&&  grep . feed_' + j + '.xml', function(output2) {
+
+              scalar.ui.desktop.widget.getNews('com/ui/desktop/widget/feed_' + scalar.ui.desktop.widget.config.NEWS.XML_POINTER + '.xml', scalar.ui.desktop.widget.config.NEWSCONFIG[scalar.ui.desktop.widget.config.NEWS.XML_POINTER].CONFIG);
+              scalar.ui.desktop.widget.config.NEWS.XML_POINTER++;
+            });
+
           }
         });
       }
@@ -69,10 +80,10 @@ scalar.ui.desktop.widget.prototype = {
 
           for (var i = 2; i < scalar.ui.desktop.widget.config.NEWS.COUNT + 2; i++) {
             scalar.ui.desktop.widget.news.push({
-              'TITLE': this.responseXML.getElementsByTagName(this.config.TITLE)[i] ? this.responseXML.getElementsByTagName(this.config.TITLE)[i].childNodes[0].nodeValue : "",
-              'DESCRIPTION': this.responseXML.getElementsByTagName(this.config.DESCRIPTION)[i] ? this.responseXML.getElementsByTagName(this.config.DESCRIPTION)[i].childNodes[0].nodeValue : "",
-              'URL': this.responseXML.getElementsByTagName(this.config.URL)[i] ? this.responseXML.getElementsByTagName(this.config.URL)[i].childNodes[0].nodeValue : "",
-              'IMAGE': this.responseXML.getElementsByTagName(this.config.IMAGE)[i] ? this.responseXML.getElementsByTagName(this.config.IMAGE)[i].childNodes[0].nodeValue : ""
+              'TITLE': this.responseXML.getElementsByTagName(this.config.TITLE)[i] ? decodeURIComponent(this.responseXML.getElementsByTagName(this.config.TITLE)[i].childNodes[0].nodeValue) : "",
+              'DESCRIPTION': this.responseXML.getElementsByTagName(this.config.DESCRIPTION)[i] ? decodeURIComponent(this.responseXML.getElementsByTagName(this.config.DESCRIPTION)[i].childNodes[0].nodeValue) : "",
+              'URL': this.responseXML.getElementsByTagName(this.config.URL)[i] ? decodeURIComponent(this.responseXML.getElementsByTagName(this.config.URL)[i].childNodes[0].nodeValue) : "",
+              'IMAGE': this.responseXML.getElementsByTagName(this.config.IMAGE)[i] ? decodeURIComponent(this.responseXML.getElementsByTagName(this.config.IMAGE)[i].childNodes[0].nodeValue) : ""
             });
           }
           var i = 0;
@@ -103,8 +114,8 @@ scalar.ui.desktop.widget.prototype = {
           for (i = 0; i < scalar.ui.selectAll('#widget-0 ul li').length; i++) {
             this.swp = scalar.ui.selectAll('#widget-0 ul li')[i];
             scalar.ui.selectAll('#widget-0 ul li p a')[i].innerHTML = '';
-            if(parseFloat(this.swp.getAttribute("id").split('--')[1])>0){
-              this.swp.setAttribute("style","display:none");
+            if (parseFloat(this.swp.getAttribute("id").split('--')[1]) > 0) {
+              this.swp.setAttribute("style", "display:none");
             }
           }
         } catch (err) {
@@ -114,7 +125,25 @@ scalar.ui.desktop.widget.prototype = {
     }
     this.xml.open("GET", url, true);
     this.xml.send();
+  }
+}
+scalar.ui.desktop.widget.config = {
+  NEWS: {
+    COUNT: 3,
+    POINTER: 0,
+    XML_POINTER: 0,
+    RELOAD: 6000 * 10,
+    SLIDER: {
+      LEN: 410,
+      TIME: 6000 * 10,
+    }
   },
+  COUNTER: 0
+}
+scalar.ui.desktop.widget = new scalar.ui.desktop.widget();
+
+/*
+,
   getFacebook: function() {
     // This is called with the results from from FB.getLoginStatus().
     function statusChangeCallback(response) {
@@ -196,17 +225,4 @@ scalar.ui.desktop.widget.prototype = {
       });
     }
   }
-}
-scalar.ui.desktop.widget.config = {
-  NEWS: {
-    COUNT: 20,
-    POINTER: 0,
-    RELOAD: 6000 * 10,
-    SLIDER: {
-      LEN: 3,
-      TIME: 6000 * 10,
-    }
-  },
-  COUNTER: 0
-}
-scalar.ui.desktop.widget = new scalar.ui.desktop.widget();
+ */

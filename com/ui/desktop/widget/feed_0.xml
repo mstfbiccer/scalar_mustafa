@@ -1,0 +1,518 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:nyt="http://www.nytimes.com/namespaces/rss/2.0" version="2.0">
+  <channel>
+    <title>NYT &gt; Technology</title>
+    <link>http://www.nytimes.com/pages/technology/index.html?partner=rss&amp;emc=rss</link>
+    <atom:link rel="self" type="application/rss+xml" href="http://www.nytimes.com/services/xml/rss/nyt/Technology.xml"/>
+    <description/>
+    <language>en-us</language>
+    <copyright>Copyright 2016  The New York Times Company</copyright>
+    <lastBuildDate>Tue, 20 Dec 2016 19:11:27 GMT </lastBuildDate>
+    <image>
+      <title>NYT &gt; Technology</title>
+      <url>https://static01.nyt.com/images/misc/NYT_logo_rss_250x40.png</url>
+      <link>http://www.nytimes.com/pages/technology/index.html?partner=rss&amp;emc=rss</link>
+    </image>
+    <item>
+      <title>Rail Crossing Warnings Are Sought for Mapping Apps</title>
+      <link>http://www.nytimes.com/2016/12/19/technology/google-digital-maps-railroad-crossings-ntsb.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/19/technology/google-digital-maps-railroad-crossings-ntsb.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/19/technology/google-digital-maps-railroad-crossings-ntsb.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/20/business/20maps1/20maps1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>A Metrolink train after colliding with a truck whose driver followed his smartphone&#x2019;s directions onto the tracks in February 2015 in Oxnard, Calif.</media:description>
+      <media:credit>Don Kelsen/Los Angeles Times, via Getty Images</media:credit>
+      <description>The National Transportation Safety Board asked tech companies to add the locations of grade crossings into digital maps and to provide alerts for drivers.</description>
+      <dc:creator>DAISUKE WAKABAYASHI</dc:creator>
+      <pubDate>Tue, 20 Dec 2016 00:39:54 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Maps</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">National Transportation Safety Board</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Traffic Accidents and Safety</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Google Maps</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Mobile Applications</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Railroad Accidents and Safety</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Apple Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Driverless and Semiautonomous Vehicles</category>
+    </item>
+    <item>
+      <title>Forgers Use Fake Web Users to Steal Real Ad Revenue</title>
+      <link>http://www.nytimes.com/2016/12/20/technology/forgers-use-fake-web-users-to-steal-real-ad-revenue.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/20/technology/forgers-use-fake-web-users-to-steal-real-ad-revenue.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/20/technology/forgers-use-fake-web-users-to-steal-real-ad-revenue.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/21/business/21ADFRAUD/21ADFRAUD-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Michael Tiffany, center, chief executive of the computer security firm White Ops, said of a Russian cyberforgery ring: &#x201C;Our adversaries are bringing whole new levels of innovation to ad fraud.&#x201D;</media:description>
+      <media:credit>Kevin Hagen for The New York Times</media:credit>
+      <description>Russian cyberforgers are diverting as much as $5 million in revenue a day as part of a scheme to show video ads to fake internet users.</description>
+      <dc:creator>VINDU GOEL</dc:creator>
+      <pubDate>Tue, 20 Dec 2016 14:00:02 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Online Advertising</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">News and News Media</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Frauds and Swindling</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Russia</category>
+    </item>
+    <item>
+      <title>European Officials Accuse Facebook of Misleading Them on WhatsApp Deal</title>
+      <link>http://www.nytimes.com/2016/12/20/business/eu-facebook-whatsapp-vestager.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/20/business/eu-facebook-whatsapp-vestager.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/20/business/eu-facebook-whatsapp-vestager.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/21/business/21EUFACEBOOKweb1/21EUFACEBOOKweb1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>The Facebook stand at the technology conference Web Summit in Lisbon in November. In August, the company said that it would start sharing some people&#x2019;s data with its WhatsApp unit.</media:description>
+      <media:credit>Patricia De Melo Moreira/Agence France-Presse &#x2014; Getty Images</media:credit>
+      <description>The charges come amid growing tension between the social media company and Europe&#x2019;s policy makers over how it dominates much of the region&#x2019;s digital world.</description>
+      <dc:creator>MARK SCOTT and JAMES KANTER</dc:creator>
+      <pubDate>Tue, 20 Dec 2016 13:23:39 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">European Commission</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Facebook Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Europe</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Vestager, Margrethe</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Privacy</category>
+    </item>
+    <item>
+      <title>Japanese Mogul Starts on Vow to Trump to Create 50,000 U.S. Jobs</title>
+      <link>http://www.nytimes.com/2016/12/19/business/dealbook/japanese-mogul-starts-on-vow-to-trump-to-create-50000-us-jobs.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/19/business/dealbook/japanese-mogul-starts-on-vow-to-trump-to-create-50000-us-jobs.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/19/business/dealbook/japanese-mogul-starts-on-vow-to-trump-to-create-50000-us-jobs.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/20/business/20db-softbank/20db-softbank-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Masayoshi Son of Softbank after a meeting with President-elect Donald J. Trump in early December.</media:description>
+      <media:credit>Andrew Harnik/Associated Press</media:credit>
+      <description>A $1.2 billion investment by Masayoshi Son&#x2019;s conglomerate, SoftBank, is the first step in his promise made in a meeting with Mr. Trump to create thousands of jobs in the United States.</description>
+      <dc:creator>MICHAEL J. de la MERCED</dc:creator>
+      <pubDate>Tue, 20 Dec 2016 01:15:50 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Son, Masayoshi</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">OneWeb Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">SOFTBANK Corporation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Labor and Jobs</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Foreign Investments</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Satellites</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">OneWeb</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+    </item>
+    <item>
+      <title>Bits: Daily Report: An Autonomous Car Future Needs Better Maps</title>
+      <link>http://www.nytimes.com/2016/12/20/technology/daily-report-an-autonomous-car-future-needs-better-maps.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/20/technology/daily-report-an-autonomous-car-future-needs-better-maps.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/20/technology/daily-report-an-autonomous-car-future-needs-better-maps.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2011/11/30/technology/bits-daily-report/bits-daily-report-moth-v5.png" medium="image" height="151" width="151"/>
+      <media:description/>
+      <media:credit/>
+      <description>The National Transportation Safety Board is urging companies to show grade crossings on the digital maps used by humans &#x2014; and, one day, robots &#x2014; for navigation.</description>
+      <dc:creator>JIM KERSTETTER</dc:creator>
+      <pubDate>Tue, 20 Dec 2016 10:00:02 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Maps</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Driverless and Semiautonomous Vehicles</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Automobile Safety Features and Defects</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">National Transportation Safety Board</category>
+    </item>
+    <item>
+      <title>Book Deal for Pantsuit Nation, Facebook Page Supporting Hillary Clinton</title>
+      <link>http://www.nytimes.com/2016/12/19/books/pantsuit-nation-facebook-page-hillary-clinton-book-deal.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/19/books/pantsuit-nation-facebook-page-hillary-clinton-book-deal.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/19/books/pantsuit-nation-facebook-page-hillary-clinton-book-deal.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/20/arts/20pantsuit-item/20pantsuit-item-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Members of the secret Facebook group Pantsuit Nation gathered in front of the White House to take pictures and show support on Election Day for Hillary Clinton.</media:description>
+      <media:credit>Al Drago/The New York Times</media:credit>
+      <description>The group was started in late October by a 33-year-old woman. The book will maintain the random feel of scrolling through a Facebook feed.</description>
+      <dc:creator>ALEXANDRA ALTER</dc:creator>
+      <pubDate>Tue, 20 Dec 2016 00:00:02 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Pantsuit Nation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Chamberlain, Libby</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Clinton, Hillary Rodham</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Book Trade and Publishing</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Social Media</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Facebook Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Books and Literature</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Flatiron Books</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2016</category>
+    </item>
+    <item>
+      <title>Itineraries: Communal TV Screens in a Binge-Watching Age? Won&#x2019;t Do, Airlines</title>
+      <link>http://www.nytimes.com/2016/12/19/business/communal-tv-screens-in-a-binge-watching-age-wont-do-airlines.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/19/business/communal-tv-screens-in-a-binge-watching-age-wont-do-airlines.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/19/business/communal-tv-screens-in-a-binge-watching-age-wont-do-airlines.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/19/business/20ITINERARIES1/20ITINERARIES1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>David Dicko, chief executive of SkyLights, with the headset his company provides for onflight virtual reality experiences.</media:description>
+      <media:credit>Brian L. Frank for The New York Times</media:credit>
+      <description>Tech companies are working with carriers worldwide to bring modern entertainment options to aircraft, including 3-D movies and high-speed streaming.</description>
+      <dc:creator>MARK SCOTT</dc:creator>
+      <pubDate>Mon, 19 Dec 2016 18:09:57 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Airlines and Airplanes</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">SkyLights Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Video Recordings, Downloads and Streaming</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Headphones and Headsets</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Movies</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Virtual Reality (Computers)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">3-D Devices and Effects</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Dicko, David</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">SkyLights</category>
+    </item>
+    <item>
+      <title>Bits: Daily Report: No Special Perks on Snapchat for Celebrities</title>
+      <link>http://www.nytimes.com/2016/12/19/technology/daily-report-no-special-perks-on-snapchat-for-celebrities.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/19/technology/daily-report-no-special-perks-on-snapchat-for-celebrities.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/19/technology/daily-report-no-special-perks-on-snapchat-for-celebrities.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/20/business/20bits/20bits-moth.png" medium="image" height="151" width="151"/>
+      <media:description>From left, an image from Kevin Hart&#x2019;s Snapchat account, the Snapchat app on Jay Sean&#x2019;s phone and an image from Serena Williams&#x2019;s account.</media:description>
+      <media:credit/>
+      <description>Social media companies have always courted celebrities and their big followings. But on Snapchat, being famous isn&#x2019;t so remarkable.</description>
+      <dc:creator>JIM KERSTETTER</dc:creator>
+      <pubDate>Mon, 19 Dec 2016 15:28:22 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Social Media</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Celebrities</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Snap Inc</category>
+    </item>
+    <item>
+      <title>Tech Tip: Give the Windows 10 Start Menu a Classic Look</title>
+      <link>http://www.nytimes.com/2016/12/19/technology/personaltech/windows-10-start-menu-classic.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/19/technology/personaltech/windows-10-start-menu-classic.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/19/technology/personaltech/windows-10-start-menu-classic.html?partner=rss&amp;emc=rss"/>
+      <description>Microsoft&#x2019;s redesign of the Windows desktop has frustrated some longtime users, but utility software can provide a refreshing blast from the past.</description>
+      <dc:creator>J. D. BIERSDORFER</dc:creator>
+      <pubDate>Mon, 19 Dec 2016 15:13:56 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Windows (Operating System)</category>
+    </item>
+    <item>
+      <title>Op-Ed Contributor: Google Wants Driverless Cars, but Do We?</title>
+      <link>http://www.nytimes.com/2016/12/19/opinion/google-wants-driverless-cars-but-do-we.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/19/opinion/google-wants-driverless-cars-but-do-we.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/19/opinion/google-wants-driverless-cars-but-do-we.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/19/opinion/19kitman/19kitman-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description/>
+      <media:credit>Daniel Salmieri</media:credit>
+      <description>With a push from the tech industry and others, automated vehicles are getting the green light without yielding to public interest.</description>
+      <dc:creator>JAMIE LINCOLN KITMAN</dc:creator>
+      <pubDate>Mon, 19 Dec 2016 08:21:12 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Driverless and Semiautonomous Vehicles</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Google Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">United States Politics and Government</category>
+    </item>
+    <item>
+      <title>Bits: A World of Surveillance Doesn&#x2019;t Always Help to Catch a Thief</title>
+      <link>http://www.nytimes.com/2016/12/18/technology/a-world-of-surveillance-doesnt-always-help-to-catch-a-thief.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/18/technology/a-world-of-surveillance-doesnt-always-help-to-catch-a-thief.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/18/technology/a-world-of-surveillance-doesnt-always-help-to-catch-a-thief.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/19/business/19bits/19nits-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>A security camera on the side of a building in Manhattan.</media:description>
+      <media:credit>Mark Lennihan/Associated Press</media:credit>
+      <description>A reporter&#x2019;s credit card was stolen, so he counted all the video cameras in stores where it was used afterward. And then he included the data from the Uber rides.</description>
+      <dc:creator>QUENTIN HARDY</dc:creator>
+      <pubDate>Mon, 19 Dec 2016 01:28:34 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Robberies and Thefts</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Cameras</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">McDonald's Corporation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Target Corporation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Walgreen Co.</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Uber Technologies Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Mission District (San Francisco, Calif)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">San Francisco (Calif)</category>
+    </item>
+    <item>
+      <title>Snapchat Plays Hard to Get With Celebrities and Influencers</title>
+      <link>http://www.nytimes.com/2016/12/18/technology/snapchat-plays-hard-to-get-with-celebrities-and-influencers.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/18/technology/snapchat-plays-hard-to-get-with-celebrities-and-influencers.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/18/technology/snapchat-plays-hard-to-get-with-celebrities-and-influencers.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/17/business/19CELEBS/19CELEBS-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Jay Sean, a musician, was courted by social networks like Facebook, but Snapchat has kept its distance.</media:description>
+      <media:credit>Bryan Anselm for The New York Times</media:credit>
+      <description>While most social networking services court and elevate celebrities, Snapchat treats them like everyday users.</description>
+      <dc:creator>KATIE BENNER and SAPNA MAHESHWARI</dc:creator>
+      <pubDate>Mon, 19 Dec 2016 01:25:08 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Snap Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Social Media</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Celebrities</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Mobile Applications</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Online Advertising</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Advertising and Marketing</category>
+    </item>
+    <item>
+      <title>Bits: Farhad&#x2019;s and Daisuke&#x2019;s Week in Tech: Is Google&#x2019;s Waymo Way Better?</title>
+      <link>http://www.nytimes.com/2016/12/17/technology/farhads-and-daisukes-week-in-tech-is-googles-waymo-way-better.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/17/technology/farhads-and-daisukes-week-in-tech-is-googles-waymo-way-better.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/17/technology/farhads-and-daisukes-week-in-tech-is-googles-waymo-way-better.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/17/business/17TECHNEWSLETTER/17TECHNEWSLETTER-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>At Wednesday&#x2019;s meeting with President-elect Donald J. Trump: from left, Larry Page of Alphabet, Sheryl Sandberg of Facebook, and Vice President-elect Mike Pence.</media:description>
+      <media:credit>Kevin Hagen for The New York Times</media:credit>
+      <description>Facebook fights fake news, and Google picks a funny name for its car business.</description>
+      <dc:creator>FARHAD MANJOO and DAISUKE WAKABAYASHI</dc:creator>
+      <pubDate>Sat, 17 Dec 2016 14:30:01 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Facebook Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Google Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Yahoo! Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Computers and the Internet</category>
+    </item>
+    <item>
+      <title>Corner Office: Yuchun Lee of Allego: The Value of a Daily Mistake</title>
+      <link>http://www.nytimes.com/2016/12/16/business/yuchun-lee-of-allego-the-value-of-a-daily-mistake.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/16/business/yuchun-lee-of-allego-the-value-of-a-daily-mistake.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/16/business/yuchun-lee-of-allego-the-value-of-a-daily-mistake.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/18/business/18CORNER/18CORNER-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Yuchun Lee</media:description>
+      <media:credit>Earl Wilson/The New York Times</media:credit>
+      <description>The chief executive, whose entrepreneurial spirit dates to kindergarten, looks for employees whose eyes sparkle and who are not set in their ways.</description>
+      <dc:creator>ADAM BRYANT</dc:creator>
+      <pubDate>Fri, 16 Dec 2016 14:07:54 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Executives and Management (Theory)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Lee, Yuchun C (1965- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Allego Inc</category>
+    </item>
+    <item>
+      <title>Free Cash in Finland. Must Be Jobless.</title>
+      <link>http://www.nytimes.com/2016/12/17/business/economy/universal-basic-income-finland.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/17/business/economy/universal-basic-income-finland.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/17/business/economy/universal-basic-income-finland.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/18/business/18Basicincome1/18Basicincome1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Factory lights glowing in Oulu, Finland, where the unemployment rate now sits above 16 percent, more than double the national average.</media:description>
+      <media:credit>Janne K&#xF6;rkk&#xF6; for The New York Times</media:credit>
+      <description>Finland will soon hand out cash to 2,000 jobless people, free of bureaucracy or limits on side earnings. The idea, universal basic income, is gaining traction worldwide.</description>
+      <dc:creator>PETER S. GOODMAN</dc:creator>
+      <pubDate>Sat, 17 Dec 2016 10:00:29 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Finland</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Labor and Jobs</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Part-Time Employment</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Unemployment</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Income</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_keyword">universal basic income</category>
+    </item>
+    <item>
+      <title>How a Putin Fan Overseas Pushed Pro-Trump Propaganda to Americans</title>
+      <link>http://www.nytimes.com/2016/12/17/world/europe/russia-propaganda-elections.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/17/world/europe/russia-propaganda-elections.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/17/world/europe/russia-propaganda-elections.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/18/world/18FAKE1/18FAKE1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>James Dowson, a far-right political activist, ran a constellation of websites out of the United Kingdom.</media:description>
+      <media:credit>Rex Features, via Associated Press</media:credit>
+      <description>With the explicit aim of getting Donald J. Trump elected, a website run by a far-right activist pumped out anti-Hillary Clinton hoaxes and drew tens of thousands of views.</description>
+      <dc:creator>MIKE McINTIRE</dc:creator>
+      <pubDate>Sat, 17 Dec 2016 14:00:26 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Dowson, James (1964- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Patriot News Agency</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2016</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Social Media</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Rumors and Misinformation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">News and News Media</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Clinton, Hillary Rodham</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Facebook Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Great Britain</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Putin, Vladimir V</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Russia</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Fringe Groups and Movements</category>
+    </item>
+    <item>
+      <title>First Words: Who&#x2019;s Responsible When Extremists Get a Platform?</title>
+      <link>http://www.nytimes.com/2016/12/13/magazine/whos-responsible-when-extremists-get-a-platform.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/13/magazine/whos-responsible-when-extremists-get-a-platform.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/13/magazine/whos-responsible-when-extremists-get-a-platform.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/18/magazine/18firstwords/18mag-18firstwords-t_CA0-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description/>
+      <media:credit>Illustration by Javier Ja&#xE9;n</media:credit>
+      <description>Social media companies aren&#x2019;t just an open marketplace for ideas &#x2014; they&#x2019;re also amplifying the most dangerous ones.</description>
+      <dc:creator>JOHN HERRMAN</dc:creator>
+      <pubDate>Tue, 13 Dec 2016 10:00:02 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Social Media</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">English Language</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Zuckerberg, Mark E</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Facebook Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Twitter</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">News and News Media</category>
+    </item>
+    <item>
+      <title>Feature: The Great A.I. Awakening</title>
+      <link>http://www.nytimes.com/2016/12/14/magazine/the-great-ai-awakening.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/14/magazine/the-great-ai-awakening.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/14/magazine/the-great-ai-awakening.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/18/magazine/18ai-cover2/18ai-cover2-moth-v3.jpg" medium="image" height="151" width="151"/>
+      <media:description/>
+      <media:credit>Illustration by Pablo Delcan</media:credit>
+      <description>How Google used artificial intelligence to transform Google Translate, one of its more popular services &#x2014; and how machine learning is poised to reinvent computing itself.</description>
+      <dc:creator>GIDEON LEWIS-KRAUS</dc:creator>
+      <pubDate>Wed, 14 Dec 2016 10:00:15 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Artificial Intelligence</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Translation and Interpreters</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Google Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Pichai, Sundar</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Voice Recognition Systems</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Computers and the Internet</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Dean, Jeff (1968- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Hinton, Geoffrey E</category>
+    </item>
+    <item>
+      <title>The Haggler: Look Who&#x2019;s Talking: The Previously Silent Conn&#x2019;s</title>
+      <link>http://www.nytimes.com/2016/12/16/your-money/haggler-conns-willing-to-talk.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/16/your-money/haggler-conns-willing-to-talk.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/16/your-money/haggler-conns-willing-to-talk.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/18/business/18Haggler/18Haggler-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description/>
+      <media:credit>Christoph Hitz</media:credit>
+      <description>With a new C.E.O., a company that had remained steadfastly mum in the face of complaints now shows an openness to discussing them.</description>
+      <dc:creator>DAVID SEGAL</dc:creator>
+      <pubDate>Fri, 16 Dec 2016 23:09:49 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Television Sets and Media Devices</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Conn's Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Customer Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Miller, Norman L (1961- )</category>
+    </item>
+    <item>
+      <title>Vine, the Six-Second Video App, Is Not Quite Shutting Down</title>
+      <link>http://www.nytimes.com/2016/12/16/technology/vine-app-twitter.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/16/technology/vine-app-twitter.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/16/technology/vine-app-twitter.html?partner=rss&amp;emc=rss"/>
+      <description>The app owned by Twitter will not survive but a new, pared-down version in January will allow users to share short videos to that social network.</description>
+      <dc:creator>MIKE ISAAC</dc:creator>
+      <pubDate>Fri, 16 Dec 2016 23:56:57 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Vine Labs Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Twitter</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Social Media</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Video Recordings, Downloads and Streaming</category>
+    </item>
+    <item>
+      <title>Bits: Daily Report: Facebook Joins Fight Against Fake News</title>
+      <link>http://www.nytimes.com/2016/12/16/technology/daily-report-facebook-joins-fight-against-fake-news.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/16/technology/daily-report-facebook-joins-fight-against-fake-news.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/16/technology/daily-report-facebook-joins-fight-against-fake-news.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/16/business/16ABC/16ABC-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>This image provided by Facebook shows some ways the company is trying to curb the spread of fake news.</media:description>
+      <media:credit>Facebook, via Associated Press</media:credit>
+      <description>Trying to walk a careful line of neutrality, the social network announced measures to fight fake news on the site, including partnering with groups that can help fact-check articles.</description>
+      <dc:creator>PUI-WING TAM</dc:creator>
+      <pubDate>Fri, 16 Dec 2016 15:17:34 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">News and News Media</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Social Media</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Facebook Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Breitbart News Network LLC</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">ABC News</category>
+    </item>
+    <item>
+      <title>In Shadow of Amazon, European Challenger Looks to China for Inspiration</title>
+      <link>http://www.nytimes.com/2016/12/16/technology/amazon-zalando-eu-online-shopping.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/16/technology/amazon-zalando-eu-online-shopping.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/16/technology/amazon-zalando-eu-online-shopping.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/16/business/16ZALANDO1/16ZALANDO1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Zalando&#x2019;s first custom-built logistics warehouse, in Erfurt, Germany. Orange boxes filled with designer dresses and shoes move along miles of conveyor belts in a warehouse the size of 18 football fields.</media:description>
+      <media:credit>Phil Moore for The New York Times</media:credit>
+      <description>Few companies have been able to keep Amazon at bay after it decides to target a new market. Zalando, Europe&#x2019;s biggest online fashion retailer, is the latest to try.</description>
+      <dc:creator>MARK SCOTT</dc:creator>
+      <pubDate>Fri, 16 Dec 2016 21:30:01 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">E-Commerce</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Fashion and Apparel</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Shopping and Retail</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Zalando SE</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Amazon.com Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Europe</category>
+    </item>
+    <item>
+      <title>Uber Defies California Regulators With Self-Driving Car Service</title>
+      <link>http://www.nytimes.com/2016/12/16/technology/uber-defies-california-regulators-with-self-driving-car-service.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/16/technology/uber-defies-california-regulators-with-self-driving-car-service.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/16/technology/uber-defies-california-regulators-with-self-driving-car-service.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/17/business/17UBER/17UBER-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>A self-driving Uber vehicle. Over California regulators&#x2019; objections, the company is testing the vehicles without obtaining state permits, as companies like Google and Tesla have done.</media:description>
+      <media:credit/>
+      <description>Uber said it had no intention of ending a new test of its self-driving vehicles in San Francisco, even though the state said it was illegal.</description>
+      <dc:creator>MIKE ISAAC</dc:creator>
+      <pubDate>Sat, 17 Dec 2016 02:00:56 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Uber Technologies Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">California</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Driverless and Semiautonomous Vehicles</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Regulation and Deregulation of Industry</category>
+    </item>
+    <item>
+      <title>Streaming: Why Netflix Lets Movie Lovers Down, and What to Do About It</title>
+      <link>http://www.nytimes.com/2016/11/13/movies/why-netflix-lets-movie-lovers-down-and-what-to-do-about-it.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/11/13/movies/why-netflix-lets-movie-lovers-down-and-what-to-do-about-it.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/11/13/movies/why-netflix-lets-movie-lovers-down-and-what-to-do-about-it.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/11/13/arts/13STREAMING1/13STREAMING1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>From left, Caleb McLaughlin, Finn Wolfhard, Millie Bobby Brown and Gaten Matarazzo in &#x201C;Stranger Things.&#x201D;</media:description>
+      <media:credit>Netflix</media:credit>
+      <description>Sure, there&#x2019;s choice via streaming. But, really, how much?</description>
+      <dc:creator>GLENN KENNY</dc:creator>
+      <pubDate>Thu, 10 Nov 2016 15:00:20 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Movies</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Video Recordings, Downloads and Streaming</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Netflix Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Web-Original Programming</category>
+    </item>
+    <item>
+      <title>App Smart: 2016 in Review: The Year&#x2019;s Best Apps</title>
+      <link>http://www.nytimes.com/2016/12/14/technology/personaltech/best-apps.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/14/technology/personaltech/best-apps.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/14/technology/personaltech/best-apps.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2016/12/14/business/15SMART1/15SMART1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>NPR One is a one-stop shop for radio and audio content.</media:description>
+      <media:credit/>
+      <description>A news curator based on what friends are reading, an easy-to-access universe of NPR audio, and an upgraded beer-tracking app are among our top picks.</description>
+      <dc:creator>KIT EATON</dc:creator>
+      <pubDate>Wed, 14 Dec 2016 17:06:37 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Mobile Applications</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Computer and Video Games</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">News and News Media</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Podcasts</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Cameras</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">National Public Radio</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Beer</category>
+    </item>
+    <item>
+      <title>Tech Tip: Choosing a Child&#x2019;s First Smartphone</title>
+      <link>http://www.nytimes.com/2016/12/16/technology/personaltech/choosing-a-childs-first-smartphone.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/16/technology/personaltech/choosing-a-childs-first-smartphone.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/16/technology/personaltech/choosing-a-childs-first-smartphone.html?partner=rss&amp;emc=rss"/>
+      <description>Both Android and iOS have parental control features and apps to help parents manage their offspring&#x2019;s mobile experience.</description>
+      <dc:creator>J. D. BIERSDORFER</dc:creator>
+      <pubDate>Fri, 16 Dec 2016 15:18:35 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Mobile Applications</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">iOS (Operating System)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Android (Operating System)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Smartphones</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Apple Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Google Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Google Play</category>
+    </item>
+    <item>
+      <title>Tech Tip: How to Back Up Your Social Media Feeds</title>
+      <link>http://www.nytimes.com/2016/12/15/technology/personaltech/how-to-back-up-your-social-media-feeds.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/15/technology/personaltech/how-to-back-up-your-social-media-feeds.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/15/technology/personaltech/how-to-back-up-your-social-media-feeds.html?partner=rss&amp;emc=rss"/>
+      <description>If you don&#x2019;t want to risk losing your photos and other memories stored online, consider making a copy of your account&#x2019;s contents for safekeeping.</description>
+      <dc:creator>J. D. BIERSDORFER</dc:creator>
+      <pubDate>Thu, 15 Dec 2016 14:36:32 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Computers and the Internet</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Social Media</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Data Storage</category>
+    </item>
+    <item>
+      <title>Tech Tip: The Quest for Your Dream Streamer</title>
+      <link>http://www.nytimes.com/2016/12/14/technology/personaltech/the-quest-for-your-dream-streamer.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/14/technology/personaltech/the-quest-for-your-dream-streamer.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/14/technology/personaltech/the-quest-for-your-dream-streamer.html?partner=rss&amp;emc=rss"/>
+      <description>The wide array of available video-streaming devices can be overwhelming, but a bit of research will help you figure out what features you really need.</description>
+      <dc:creator>J. D. BIERSDORFER</dc:creator>
+      <pubDate>Wed, 14 Dec 2016 18:18:05 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Television Sets and Media Devices</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Computers and the Internet</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Video Recordings, Downloads and Streaming</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Mobile Applications</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Computer and Video Games</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Amazon.com Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Apple TV</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Google Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Netflix Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Hulu.com</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Roku</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Siri Inc</category>
+    </item>
+    <item>
+      <title>Tech Tip: The Twitter Post, Take 2</title>
+      <link>http://www.nytimes.com/2016/12/13/technology/personaltech/the-twitter-post-take-2.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/2016/12/13/technology/personaltech/the-twitter-post-take-2.html</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/2016/12/13/technology/personaltech/the-twitter-post-take-2.html?partner=rss&amp;emc=rss"/>
+      <description>The popular service currently doesn&#x2019;t let you edit your thoughts after you post them, but some apps can help you make corrections more quickly.</description>
+      <dc:creator>J. D. BIERSDORFER</dc:creator>
+      <pubDate>Tue, 13 Dec 2016 17:08:15 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Social Media</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Computers and the Internet</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Twitter</category>
+    </item>
+  </channel>
+</rss>
