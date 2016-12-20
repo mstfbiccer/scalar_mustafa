@@ -10,30 +10,66 @@ scalar.ui.desktop.wave = function() {
   this.getIp.send();
   this.getIp.onload = function() {
     this.weather = new XMLHttpRequest();
-    this.weather.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + scalar.ui.desktop.wave.location.response.city + "&appid="+scalar.ui.desktop.wave.config.LOCATION.API_KEY+"&units=metric", true);
+    this.weather.open("GET", "http://api.openweathermap.org/data/2.5/forecast?q=" + scalar.ui.desktop.wave.location.response.city + "&mode=json&appid="+scalar.ui.desktop.wave.config.LOCATION.API_KEY+"&units=metric", true);
     this.weather.responseType = "json";
     this.weather.send();
   };
+  this.days = new Array();
+  this.days = ["Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi","Pazar"];
+  scalar.exec('date "+%A"', function(output) {
+    scalar.ui.select('#daily-weather-0 .daily-weather-status span').innerHTML = output;
+    var toDay = output;
+    var dayOrder = scalar.ui.desktop.wave.days.indexOf(toDay);
+    for(i=0;i<scalar.ui.desktop.wave.days.length;i++){
+      console.log(output);
+      console.log(scalar.ui.desktop.wave.days[i]);
+      if(scalar.ui.desktop.wave.days[i]==output){
+        console.log(scalar.ui.desktop.wave.days[i]);
+      }
+    }
+  });
 
   this.time();
   this.dateAndTime();
 
   var weatherControl = setInterval(function(){
-    try {
-      if(scalar.ui.desktop.wave.getIp.weather.response.weather[0].description) {
-        scalar.ui.desktop.wave.weather();
-        clearInterval(weatherControl);
+    try {      
+      if(scalar.ui.desktop.wave.getIp.weather.response.list[0].weather[0].description) {        
+        var weatherIdSmall = scalar.ui.desktop.wave.getIp.weather.response.list[0].weather[0].id;
+        var tempSmall = parseInt(scalar.ui.desktop.wave.getIp.weather.response.list[0].main.temp);
+        scalar.ui.desktop.wave.weather('#weather',weatherIdSmall,0,false);
+        scalar.ui.desktop.wave.weather('#daily-weather-0',weatherIdSmall,tempSmall,true);
+
+          scalar.exec('date "+%d', function(output) {
+            scalar.ui.desktop.wave.toDay = output;
+          });
+          var counter = 1;
+          for (var i = 0; i < scalar.ui.desktop.wave.getIp.weather.response.list.length; i++){            
+            if(scalar.ui.desktop.wave.getIp.weather.response.list[i].dt_txt.split('-')[2].split(' ')[0] != scalar.ui.desktop.wave.toDay){              
+              if (scalar.ui.desktop.wave.getIp.weather.response.list[i].dt_txt.split('-')[2].split(' ')[1].split(':')[0] == "15") {                
+                var weatherId = scalar.ui.desktop.wave.getIp.weather.response.list[i].weather[0].id;
+                var temp = parseInt(scalar.ui.desktop.wave.getIp.weather.response.list[i].main.temp);
+                scalar.ui.desktop.wave.weather('#daily-weather-'+counter.toString(),weatherId,temp,true);
+                counter++;
+                if(counter==4) {
+                  clearInterval(weatherControl);                  
+                }
+              }
+            }
+          }
+        clearInterval(weatherControl);        
         
         scalar.log.success.push('Weather updated.');
       }
-    }catch (err) {
+    }catch (err) {      
       scalar.log.error.push('Weather update failed.');
     }
   }, 100);
 
   scalar.ui.select('#power').onclick = function(){
     alert("Electron 60 saniye içerisinde kapanıcak","Uyarı");
-    scalar.exec('shutdown',function(output){console.log(output)})
+    scalar.exec('shutdown',function(output){
+    });
   }
   scalar.ui.select('#update').onclick = function(){
     scalar.exec('git pull',function(output){
@@ -76,8 +112,6 @@ scalar.ui.desktop.wave.config = {
     RELOAD: 60000
   },
   WEATHER: {
-    SELECT: '#weather',
-    SELECT_BIG: '',
     RELOAD: 60000
   },
   DATEANDTIME: {
@@ -112,16 +146,26 @@ scalar.ui.desktop.wave.prototype = {
       });
     }, this.config.TIME.RELOAD);
   },
-  weather : function() {
-    this.description = scalar.ui.desktop.wave.getIp.weather.response.weather[0].id;
-    switch (this.description) {
+  weather : function(select, description, temp, control) {
+    if (control) {
+      scalar.ui.select(select+' .daily-weather-degree span').innerHTML = temp.toString();
+    }
+    switch (description) {
     case 800:
       scalar.exec('date "+%H:%M"', function(output) {
         this.timeValue = parseInt(output.split(':')[0])
         if(this.timeValue < 7 || this.timeValue > 18) {
-        scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-moon';
+          if (control) {
+            scalar.ui.select(select+' div').className = 'icon-moon';
+          }else {
+            scalar.ui.select(select).className = 'icon-moon';
+          }
         }else {
-          scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-sun';
+          if (control) {
+            scalar.ui.select(select+' div').className = 'icon-sun';
+          }else {
+            scalar.ui.select(select).className = 'icon-sun';
+          }
         }
       });
       break;
@@ -129,18 +173,34 @@ scalar.ui.desktop.wave.prototype = {
       scalar.exec('date "+%H:%M"', function(output) {
         this.timeValue = parseInt(output.split(':')[0])
         if(this.timeValue < 7 || this.timeValue > 18) {
-        scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-cloud';
+          if (control) {
+            scalar.ui.select(select+' div').className = 'icon-cloud';
+          }else {
+            scalar.ui.select(select).className = 'icon-cloud';
+          }
         }else {
-          scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-cloudy';
+          if (control) {
+            scalar.ui.select(select+' div').className = 'icon-cloudy';
+          }else {
+            scalar.ui.select(select).className = 'icon-cloudy';
+          }
         }
       });
       break;
     case 802:
-      scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-cloud2';
+      if (control) {
+        scalar.ui.select(select+' div').className = 'icon-cloud2';
+      }else {
+        scalar.ui.select(select).className = 'icon-cloud2';
+      }
       break;
     case 803:
     case 804:
-      scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-cloudy2';
+      if (control) {
+        scalar.ui.select(select+' div').className = 'icon-cloudy2';
+      }else {
+        scalar.ui.select(select).className = 'icon-cloudy2';
+      }
       break;
     case 300:
     case 301:
@@ -151,7 +211,11 @@ scalar.ui.desktop.wave.prototype = {
     case 313:
     case 314:
     case 321:
-      scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-rainy2';
+      if (control) {
+        scalar.ui.select(select+' div').className = 'icon-rainy2';
+      }else {
+        scalar.ui.select(select).className = 'icon-rainy2';
+      }
       break;
     case 500:
     case 501:
@@ -162,7 +226,11 @@ scalar.ui.desktop.wave.prototype = {
     case 521:
     case 522:
     case 531:
-      scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-rainy';
+      if (control) {
+        scalar.ui.select(select+' div').className = 'icon-rainy';
+      }else {
+        scalar.ui.select(select).className = 'icon-rainy';
+      }
       break;
     case 200:
     case 201:
@@ -174,7 +242,11 @@ scalar.ui.desktop.wave.prototype = {
     case 230:
     case 231:
     case 232:
-      scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-lightning2';
+      if (control) {
+        scalar.ui.select(select+' div').className = 'icon-lightning2';
+      }else {
+        scalar.ui.select(select).className = 'icon-lightning2';
+      }
       break;
     case 600:
     case 601:
@@ -187,7 +259,11 @@ scalar.ui.desktop.wave.prototype = {
     case 621:
     case 622:
     case 511:
-      scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-snowy3';
+      if (control) {
+        scalar.ui.select(select+' div').className = 'icon-snowy3';
+      }else {
+        scalar.ui.select(select).className = 'icon-snowy3';
+      }
       break;
     case 701:
     case 711:
@@ -199,100 +275,13 @@ scalar.ui.desktop.wave.prototype = {
     case 762:
     case 771:
     case 781:
-      scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-weather3';
+      if (control) {
+        scalar.ui.select(select+' div').className = 'icon-weather3';
+      }else {
+        scalar.ui.select(select).className = 'icon-weather3';
+      }
       break;
     }
-    setInterval(function(){
-      this.description = scalar.ui.desktop.wave.getIp.weather.response.weather[0].id;
-      switch (this.description) {
-      case 800:
-        scalar.exec('date "+%H:%M"', function(output) {
-          this.timeValue = parseInt(output.split(':')[0])
-          if(this.timeValue < 7 || this.timeValue > 18) {
-          scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-moon';
-          }else {
-            scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-sun';
-          }
-        });
-        break;
-      case 801:
-        scalar.exec('date "+%H:%M"', function(output) {
-          this.timeValue = parseInt(output.split(':')[0])
-          if(this.timeValue < 7 || this.timeValue > 18) {
-          scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-cloud';
-          }else {
-            scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-cloudy';
-          }
-        });
-        break;
-      case 802:
-        scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-cloud2';
-        break;
-      case 803:
-      case 804:
-        scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-cloudy2';
-        break;
-      case 300:
-      case 301:
-      case 302:
-      case 310:
-      case 311:
-      case 312:
-      case 313:
-      case 314:
-      case 321:
-        scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-rainy2';
-        break;
-      case 500:
-      case 501:
-      case 502:
-      case 503:
-      case 504:
-      case 520:
-      case 521:
-      case 522:
-      case 531:
-        scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-rainy';
-        break;
-      case 200:
-      case 201:
-      case 202:
-      case 210:
-      case 211:
-      case 212:
-      case 221:
-      case 230:
-      case 231:
-      case 232:
-        scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-lightning2';
-        break;
-      case 600:
-      case 601:
-      case 602:
-      case 611:
-      case 612:
-      case 615:
-      case 616:
-      case 620:
-      case 621:
-      case 622:
-      case 511:
-        scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-snowy3';
-        break;
-      case 701:
-      case 711:
-      case 721:
-      case 731:
-      case 741:
-      case 751:
-      case 761:
-      case 762:
-      case 771:
-      case 781:
-        scalar.ui.select(scalar.ui.desktop.wave.config.WEATHER.SELECT).className = 'icon-weather3';
-        break;
-      }
-    },this.config.WEATHER.RELOAD);
   }
 }
 
