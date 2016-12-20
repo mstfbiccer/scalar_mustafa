@@ -57,15 +57,54 @@ scalar.ui.append('body',scalar.ui.createElement('div',{'id':'desktop'}));
         scalar.ui.append('#calendar',scalar.ui.createElement('div',{'id':'time'}));
           scalar.ui.append('#time','');
         scalar.ui.append('#calendar',scalar.ui.createElement('div',{'id':'weather','class':'icon-warning'}));
+
+
       scalar.ui.append('#menu',scalar.ui.createElement('li',{'id':'power'}));
+
         scalar.ui.append('#power',scalar.ui.createElement('div',{'class':'icon-power_settings_new'}));
+        scalar.ui.append('#power',scalar.ui.createElement('ul',{'id':'power-menu'}));
+          scalar.ui.append('#power-menu',scalar.ui.createElement('li',{'id':'power-menu-0'}));
+          scalar.ui.append('#power-menu',scalar.ui.createElement('li',{'id':'power-menu-1'}));
+          scalar.ui.append('#power-menu',scalar.ui.createElement('li',{'id':'power-menu-2'}));
+          scalar.ui.append('#power-menu',scalar.ui.createElement('li',{'id':'power-menu-3'}));
+
+          scalar.ui.append('#power-menu-0','Log Out...');
+            scalar.ui.select('#power-menu-0').onclick = function(){
+              scalar.exec('logout',function(output){})
+            }
+          scalar.ui.append('#power-menu-1','Suspend');
+            scalar.ui.select('#power-menu-1').onclick = function(){
+              scalar.exec('systemctl suspend',function(output){})
+            }
+          scalar.ui.append('#power-menu-2','Restart');
+            scalar.ui.select('#power-menu-2').onclick = function(){
+              scalar.exec('shutdown -r now',function(output){})
+            }
+          scalar.ui.append('#power-menu-3','Shut Down...');
+            scalar.ui.select('#power-menu-3').onclick = function(){
+              scalar.exec('poweroff',function(output){})
+            }
+
       scalar.ui.append('#menu',scalar.ui.createElement('li',{'id':'user'}));
+        
         scalar.ui.append('#user',scalar.ui.createElement('div',{'class':'icon-person'}));
+        scalar.ui.append('#user',scalar.ui.createElement('ul',{'id':'user-menu'}));
+          scalar.ui.append('#user-menu',scalar.ui.createElement('li',{'id':'user-menu-0'}));
+          scalar.ui.append('#user-menu',scalar.ui.createElement('li',{'id':'user-menu-1'}));
+          scalar.ui.append('#user-menu',scalar.ui.createElement('li',{'id':'user-menu-2'}));
+          scalar.ui.append('#user-menu',scalar.ui.createElement('li',{'id':'user-menu-3'}));
+          scalar.ui.append('#user-menu',scalar.ui.createElement('li',{'id':'user-menu-4'}));
+
+          scalar.ui.append('#user-menu-0','About This Computer');
+          scalar.ui.append('#user-menu-1','Scalar Help...');
+          scalar.ui.append('#user-menu-2','System Settings...');
+          scalar.ui.append('#user-menu-3','Lock');
+          scalar.exec('echo "$USER"', function(output) {scalar.ui.select('#user-menu #user-menu-4').innerHTML =  output});
+
       scalar.ui.append('#menu',scalar.ui.createElement('li',{'id':'config'}));
         scalar.ui.append('#config',scalar.ui.createElement('div',{'class':'icon-settings'}));
       scalar.ui.append('#menu',scalar.ui.createElement('li',{'id':'update'}));
         scalar.ui.append('#update',scalar.ui.createElement('div',{'class':'icon-sync'}));
-
 
   scalar.ui.append('#desktop',scalar.ui.createElement('div',{'id':'dock'}));
     scalar.ui.append('#dock',scalar.ui.createElement('div',{'id':'dock-container'}));
@@ -81,8 +120,6 @@ scalar.ui.append('body',scalar.ui.createElement('div',{'id':'desktop'}));
         scalar.ui.append('#dc-5',scalar.ui.createElement('b'));
 
 
-scalar.exec('date "+%H:%M"', function(output) {
-  console.log(output);
-});
+scalar.exec('echo "$USER"', function(output) {console.log(output)})
 
 $ = scalar.ui;

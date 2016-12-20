@@ -108,6 +108,40 @@ color: #B6AFA8;
     color: #666666;
     letter-spacing: 0.4px;
  }
+#wave #menu li ul{
+    display: block;
+    width: 150px;
+    border-radius: 2px;
+    overflow: hidden;
+    padding-right: 8px;
+    position: relative;
+    display: none;
+    padding-top: 10px;
+}
+ #wave #menu li ul li{
+    float: inherit;
+    margin-right: 0px;
+    text-align: left;
+    color: rgba(0,0,0,0.5);
+    padding: 8px;
+    border-bottom: 1px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: inline-block;
+    width: 100%;
+    background: #b6afa8;
+ }
+ #wave #menu li:hover ul{
+  display: block;
+}
+ #wave #menu li:hover ul li{
+}
+ #wave #menu li:hover ul li:last-child{
+  border-bottom: none;
+}
+  #wave #menu li:hover ul li:hover{
+    background: #b6afa8;
+    color: rgba(0,0,0,0.7);
+  }
  #widget-container {
     width: 100%;
     height: 590px;
