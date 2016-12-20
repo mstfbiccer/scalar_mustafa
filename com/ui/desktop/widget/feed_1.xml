@@ -4,7 +4,7 @@
     <title>FOTOMAÇ - Futbol</title>
     <description>FOTOMAÇ - Türkiye'nin en çok satan Spor Gazetesi</description>
     <link>http://www.fotomac.com.tr</link>
-    <lastBuildDate>Tue, 20 Dec 2016 16:30:21 +03:00</lastBuildDate>
+    <lastBuildDate>Tue, 20 Dec 2016 19:30:25 +03:00</lastBuildDate>
     <generator>FOTOMAÇ Software Team</generator>
     <image>
       <url>http://www.fotomac.com.tr/c/i/logo.gif</url>
@@ -14,6 +14,15 @@
     <language>tr-TR</language>
     <copyright>Copyright © 2003-2016 TURKUVAZ GAZETE DERGİ BASIM A.Ş.</copyright>
     <ttl>3</ttl>
+    <item>
+      <title><![CDATA[Teröre karşı birlik mesajı]]></title>
+      <link><![CDATA[http://www.fotomac.com.tr/Futbol/2016/12/20/terore-karsi-birlik-mesaji]]></link>
+      <description><![CDATA[Gençlik ve Spor Bakanı Akif Çağatay Kılıç, Türkiye Futbol Federasyonu Başkanı Yıldırım Demirören ve TFF 1. Lig kulüplerinin temsilcileriyle bir araya gelerek, teröre karşı birlik mesajı verdi.
+Sabah saatlerinde...  <a href="http://www.fotomac.com.tr/Futbol/2016/12/20/terore-karsi-birlik-mesaji">Devamı için tıklayınız<a/>]]></description>
+      <category><![CDATA[Futbol]]></category>
+      <pubDate>Mon, 19 Dec 2016 22:00:00 GMT</pubDate>
+      <guid><![CDATA[/Futbol/2016/12/20/terore-karsi-birlik-mesaji]]></guid>
+    </item>
     <item>
       <title><![CDATA['Kadın Messi' Avrupa devine imza attı]]></title>
       <link><![CDATA[http://www.fotomac.com.tr/multimedya/galeri/sporturu/alex-morgan-avrupa-devine-imza-atti]]></link>
@@ -439,19 +448,6 @@ Beşiktaş,...  <a href="http://www.fotomac.com.tr/Futbol/2016/12/02/iste-besikt
       <category><![CDATA[Futbol]]></category>
       <pubDate>Thu, 01 Dec 2016 22:00:00 GMT</pubDate>
       <guid><![CDATA[/Futbol/2016/12/02/iste-besiktasin-muhtemel-11i]]></guid>
-    </item>
-    <item>
-      <title><![CDATA[Futbolda haftanın programı]]></title>
-      <link><![CDATA[http://www.fotomac.com.tr/Futbol/2016/12/02/futbolda-haftanin-programi]]></link>
-      <description><![CDATA[Türkiye Futbol Federasyonundan yapılan açıklamaya göre, profesyonel liglerde haftanın maç programı şöyle:
--Spor Toto Süper Lig
-
-Yarın:
-
-14.00 Medipol Başakşehir-Antalyaspor (3. İstanbul Başakşehir...  <a href="http://www.fotomac.com.tr/Futbol/2016/12/02/futbolda-haftanin-programi">Devamı için tıklayınız<a/>]]></description>
-      <category><![CDATA[Futbol]]></category>
-      <pubDate>Thu, 01 Dec 2016 22:00:00 GMT</pubDate>
-      <guid><![CDATA[/Futbol/2016/12/02/futbolda-haftanin-programi]]></guid>
     </item>
   </channel>
 </rss>

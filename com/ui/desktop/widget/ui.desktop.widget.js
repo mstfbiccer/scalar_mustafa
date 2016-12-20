@@ -23,6 +23,7 @@ scalar.ui.desktop.widget = function() {
   scalar.ui.append('#widget-0', scalar.ui.createElement('h1'));
   scalar.ui.select('#widget-0 h1').innerHTML = "En Yeni Haberler";
   scalar.ui.append('#widget-0', scalar.ui.createElement('ul'));
+  scalar.exec("find -name '*.xml' -exec rm {} +",function(){});
   scalar.exec('cd com/ui/desktop/widget && for f in *list.json;do grep . $f ;done', function(output) {
     scalar.ui.select('#widget-0 ul').innerHTML = "";
     scalar.ui.desktop.widget.list = JSON.parse(output);
@@ -43,6 +44,7 @@ scalar.ui.desktop.widget = function() {
     }
     setInterval(function() {
       scalar.ui.select('#widget-0 ul').innerHTML = "";
+      scalar.exec("find -name '*.xml' -exec rm {} +",function(){});
       scalar.ui.desktop.widget.list = JSON.parse(output);
       scalar.ui.desktop.widget.config.NEWS.XML_POINTER = 0;
       for (i = 0; i < scalar.ui.desktop.widget.list.SOURCE.length; i++) {
@@ -50,7 +52,6 @@ scalar.ui.desktop.widget = function() {
           scalar.ui.desktop.widget.config.NEWSCONFIG.push(JSON.parse(output));
           for (j = scalar.ui.desktop.widget.config.NEWSCONFIG.length - 1; j < scalar.ui.desktop.widget.config.NEWSCONFIG.length; j++) {
             scalar.exec('cd com/ui/desktop/widget && wget --output-document=feed_' + j + '.xml ' + scalar.ui.desktop.widget.config.NEWSCONFIG[j].SOURCE + '&&  grep . feed_' + j + '.xml', function(output2) {
-
               scalar.ui.desktop.widget.getNews('com/ui/desktop/widget/feed_' + scalar.ui.desktop.widget.config.NEWS.XML_POINTER + '.xml', scalar.ui.desktop.widget.config.NEWSCONFIG[scalar.ui.desktop.widget.config.NEWS.XML_POINTER].CONFIG);
               scalar.ui.desktop.widget.config.NEWS.XML_POINTER++;
             });
