@@ -21,11 +21,6 @@ scalar.ui.desktop.widget = function() {
     'onlogin': 'checkLoginState();'
   }));
 
-
-  scalar.ui.append('#widget-container', scalar.ui.createElement('div', {
-    'id': 'widget-2',
-    'class': 'content'
-  }));
   scalar.ui.append('#widget-0', scalar.ui.createElement('h1'));
   scalar.ui.select('#widget-0 h1').innerHTML = "En Yeni Haberler";
   scalar.ui.append('#widget-0', scalar.ui.createElement('ul'));
