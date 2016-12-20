@@ -2,6 +2,7 @@
 <html>
 <head>
 <script type="text/javascript" src="com/core/core.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&amp;subset=latin-ext" rel="stylesheet">
   <style type="text/css">
     /*Core*/
  
@@ -26,7 +27,7 @@
      outline: none;
  }
  /*
-    Orange:#EB6536;
+    Orange:#ffb674;
     Grey:#B6AFA8;
     Black:#333333;
     */
@@ -115,7 +116,6 @@ color: #B6AFA8;
  #widget-container .content {
     width: 50%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.1);
     float: left;
     position: relative;
     border-radius: 3px;
@@ -158,23 +158,31 @@ color: #B6AFA8;
      background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 60%, rgba(255, 255, 255, 0.2) 100%);
  }
  .content h1 {
-     letter-spacing: 1.5px;
-     padding-left: 10px;
-     color: #fff;
-     text-align: center;
+    letter-spacing: 1.5px;
+    padding-left: 10px;
+    color: rgba(255, 255, 255, 1);
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    margin: 0px;
+    margin-top: 83px;
+    padding-bottom: 5px;
+    font-size: 24px;
+    background: rgba(119, 41, 83, 1);
+    width: 70%;
+    opacity: 0.7;
  }
  .content ul {
-     width: 100%;
-     height: 90%;
-     margin: auto;
-     border-radius: 3px;
-     background: #fff;
-     overflow: auto;
+    width: 100%;
+    height: 90%;
+    margin: auto;
+    border-radius: 3px;
+    overflow: auto;
+    margin-top: 20px;
  }
  .content ul li {
-     padding: 10px;
-     overflow: hidden;
-     border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    overflow: hidden;
  }
  .content ul li div {
      float: right;
@@ -189,14 +197,18 @@ color: #B6AFA8;
      height: auto;
  }
  .content ul li a {
-     font-size: 22px;
-     font-weight: bold;
-     letter-spacing: 0.5px;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+    color: #a09a94;
+    font-weight: normal;
  }
  .content ul li p {
-     margin-left: 15px;
-     padding-top: 5px;
-     color: #666;
+    color: rgba(160, 154, 148, 0.76);
+    background: rgba(0,0,0,0.7);
+    padding: 10px;
+    border-radius: 2px;
+    margin-top: 5px;
+    cursor: default;
  }
   </style>
 </head>
