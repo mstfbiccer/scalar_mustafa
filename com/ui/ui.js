@@ -30,6 +30,11 @@ scalar.ui.prototype = {
         Object.keys(this.attribute).indexOf("scope") >= 0 ? this.htmlElement.setAttribute("scope", this.attribute.scope) : undefined;
         Object.keys(this.attribute).indexOf("onlogin") >= 0 ? this.htmlElement.setAttribute("onlogin", this.attribute.onlogin) : undefined;
         Object.keys(this.attribute).indexOf("onkeypress") >= 0 ? this.htmlElement.setAttribute("onkeypress", this.attribute.onkeypress) : undefined;
+        Object.keys(this.attribute).indexOf("width") >= 0 ? this.htmlElement.setAttribute("width", this.attribute.width) : undefined;
+        Object.keys(this.attribute).indexOf("height") >= 0 ? this.htmlElement.setAttribute("height", this.attribute.height) : undefined;
+        Object.keys(this.attribute).indexOf("frameborder") >= 0 ? this.htmlElement.setAttribute("frameborder", this.attribute.frameborder) : undefined;
+        Object.keys(this.attribute).indexOf("allowtransparency") >= 0 ? this.htmlElement.setAttribute("allowtransparency", this.attribute.allowtransparency) : undefined;
+        Object.keys(this.attribute).indexOf("style") >= 0 ? this.htmlElement.setAttribute("style", this.attribute.style) : undefined;
       }
     }
     return this.htmlElement;

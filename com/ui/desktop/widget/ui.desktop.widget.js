@@ -15,9 +15,13 @@ scalar.ui.desktop.widget = function() {
     'id': 'widget-1',
     'class': 'content'
   }));
-  scalar.ui.append('#widget-1', scalar.ui.createElement('fb:login-button', {
-    'scope': 'public_profile,email',
-    'onlogin': 'checkLoginState();'
+  scalar.ui.append('#widget-1', scalar.ui.createElement('iframe', {
+    'src': 'https://embed.spotify.com/?uri=spotify%3Auser%3Aspotify%3Aplaylist%3A2PXdUld4Ueio2pHcB6sM8j',
+    'width':'600',
+    'height':'430',
+    'frameborder':'0',
+    'allowtransparency':'true',
+    'style':"margin-top: 83px;margin-left: 15px;"
   }));
 
   scalar.ui.append('#widget-0', scalar.ui.createElement('h1'));

@@ -16,7 +16,8 @@ const express = require('./myserver');
      width: 1280,
      height: 720,
      transparent: true,
-     frame: false
+     frame: false,
+     fullscreen:true
    })
    // and load the index.html of the app.
 win.loadURL("http://localhost:2016");
