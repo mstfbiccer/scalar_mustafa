@@ -87,12 +87,12 @@ scalar.ui.desktop.wave = function() {
           if(this.scalarBrowser!=undefined && this.scalarBrowser.closed==="false") {
               this.scalarBrowser.location="//"+document.getElementById("search").value;
               this.scalarBrowser.focus();
-              this.scalarBrowser.eval("document.querySelector('.StreamsHero-header').innerHTML='Welcome to Scalar'")
+              this.scalarBrowser.eval("document.querySelector('.StreamsHero-header').setAttribute('onclick','window.close()')");
 
           }else {
               this.scalarBrowser=window.open("//"+document.getElementById("search").value);
               this.scalarBrowser.focus();
-              this.scalarBrowser.eval("document.querySelector('.StreamsHero-header').innerHTML='Welcome to Scalar'")
+              this.scalarBrowser.eval("this.h = document.createElement('div');this.h.id = 'node-scalar';this.h.setAttribute('onclick','window.close()');this.h.setAttribute('style','cursor:pointer;background:Red;width:100px;height:100px;position:fixed;left:10px;top:10px;z-index:9999');document.body.appendChild(this.h)");
           }
       }
     }catch(err) {}

@@ -2,8 +2,6 @@
   "SOURCE": "http://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
   "CONFIG": {
     "TITLE": "title",
-    "DESCRIPTION": "description",
-    "URL": "link",
     "IMAGE": "image",
     "RELOAD": 60000
   }
