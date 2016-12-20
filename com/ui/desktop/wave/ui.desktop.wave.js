@@ -16,6 +16,7 @@ scalar.ui.desktop.wave = function() {
   };
 
   this.time();
+  this.dateAndTime();
 
   var weatherControl = setInterval(function(){
     try {
@@ -39,8 +40,11 @@ scalar.ui.desktop.wave = function() {
       location.reload();
       alert("Cihazınız güncelleştirildi.","Uyarı");
     })
-
   }
+  scalar.ui.select('#calendar').onclick = function(){
+    
+  }
+
 }
 
 scalar.ui.desktop.wave.prototype = {
@@ -58,9 +62,28 @@ scalar.ui.desktop.wave.config = {
   WEATHER: {
     SELECT: '#weather',
     RELOAD: 60000
+  },
+  DATEANDTIME: {
+    RELOAD: 60000
   }
 };
 scalar.ui.desktop.wave.prototype = {
+  dateAndTime : function() {
+    scalar.exec('date "+%d %B %Y %A"',function(output){
+      scalar.ui.select('#time-dmy').innerHTML = output;
+    })
+    scalar.exec('date "+%H:%M"', function(output) {
+      scalar.ui.select('#time-hm').innerHTML = output;
+    });
+    setInterval(function(){
+      scalar.exec('date "+%d %B %Y %A"',function(output){
+        scalar.ui.select('#time-dmy').innerHTML = output;
+      })
+      scalar.exec('date "+%H:%M"', function(output) {
+        scalar.ui.select('#time-hm').innerHTML = output;
+      });
+    }, this.config.DATEANDTIME.RELOAD);
+  },
   time : function(){
     scalar.exec('date "+%H:%M"', function(output) {
       scalar.ui.select(scalar.ui.desktop.wave.config.TIME.SELECT).innerHTML = output;
