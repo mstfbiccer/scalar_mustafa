@@ -173,5 +173,6 @@ scalar.ui.append('body',scalar.ui.createElement('div',{'id':'desktop'}));
           scalar.ui.append('#daily-weather-4 .daily-weather-degree',scalar.ui.createElement('div',{'class':'icon-Celsius'}));
 
     scalar.ui.append('#celendar-detail',scalar.ui.createElement('div',{'id':'celendar-close'}));
+      scalar.ui.append('#celendar-close','>>>');
 
 $ = scalar.ui;

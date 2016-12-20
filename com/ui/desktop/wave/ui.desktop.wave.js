@@ -16,16 +16,14 @@ scalar.ui.desktop.wave = function() {
   };
   this.days = new Array();
   this.days = ["Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi","Pazar"];
-  scalar.exec('date "+%A"', function(output) {
-    scalar.ui.select('#daily-weather-0 .daily-weather-status span').innerHTML = output;
-    var toDay = output;
-    var dayOrder = scalar.ui.desktop.wave.days.indexOf(toDay);
-    for(i=0;i<scalar.ui.desktop.wave.days.length;i++){
-      console.log(output);
-      console.log(scalar.ui.desktop.wave.days[i]);
-      if(scalar.ui.desktop.wave.days[i]==output){
-        console.log(scalar.ui.desktop.wave.days[i]);
+  scalar.exec('date "+%u"', function(output) {
+    var toDayOrder = parseInt(output)-1;
+    for (var i = 0; i < 5 ; i++) {
+      var dayOrder = i+toDayOrder;
+      if (dayOrder > 6) {
+        dayOrder = dayOrder-7;
       }
+      scalar.ui.select('#daily-weather-'+i+' .daily-weather-status span').innerHTML = scalar.ui.desktop.wave.days[dayOrder];
     }
   });
 
@@ -78,7 +76,16 @@ scalar.ui.desktop.wave = function() {
     })
   }
   scalar.ui.select('#calendar').onclick = function(){
-    
+    scalar.ui.select('#celendar-detail').setAttribute('style','width:270px;')
+    setTimeout(function(){
+      scalar.ui.select('#weather-detail').setAttribute('style','display:block;')
+      scalar.ui.select('#time-detail').setAttribute('style','display:block;')
+    }, 300);
+  }
+  scalar.ui.select('#celendar-close').onclick = function(){
+    scalar.ui.select('#celendar-detail').setAttribute('style','width:0px;')
+    scalar.ui.select('#weather-detail').setAttribute('style','display:none;')
+    scalar.ui.select('#time-detail').setAttribute('style','display:none;')
   }
 
   this.scalarOpen= function (e) {
@@ -157,12 +164,14 @@ scalar.ui.desktop.wave.prototype = {
         if(this.timeValue < 7 || this.timeValue > 18) {
           if (control) {
             scalar.ui.select(select+' div').className = 'icon-moon';
+            scalar.ui.select(select+' .daily-weather-commend').innerHTML = "Hava açık ve ılık olacak.";
           }else {
             scalar.ui.select(select).className = 'icon-moon';
           }
         }else {
           if (control) {
             scalar.ui.select(select+' div').className = 'icon-sun';
+            scalar.ui.select(select+' .daily-weather-commend').innerHTML = "Hava açık ve ılık olacak.";
           }else {
             scalar.ui.select(select).className = 'icon-sun';
           }
@@ -175,12 +184,14 @@ scalar.ui.desktop.wave.prototype = {
         if(this.timeValue < 7 || this.timeValue > 18) {
           if (control) {
             scalar.ui.select(select+' div').className = 'icon-cloud';
+            scalar.ui.select(select+' .daily-weather-commend').innerHTML = "Hava parçalı bulutlu. Herşeye hazırlıklı olun.";
           }else {
             scalar.ui.select(select).className = 'icon-cloud';
           }
         }else {
           if (control) {
             scalar.ui.select(select+' div').className = 'icon-cloudy';
+            scalar.ui.select(select+' .daily-weather-commend').innerHTML = "Hava parçalı bulutlu. Herşeye hazırlıklı olun.";
           }else {
             scalar.ui.select(select).className = 'icon-cloudy';
           }
@@ -190,6 +201,7 @@ scalar.ui.desktop.wave.prototype = {
     case 802:
       if (control) {
         scalar.ui.select(select+' div').className = 'icon-cloud2';
+        scalar.ui.select(select+' .daily-weather-commend').innerHTML = "Hava kapalı olacak. Dikkatli olun.";
       }else {
         scalar.ui.select(select).className = 'icon-cloud2';
       }
@@ -198,6 +210,7 @@ scalar.ui.desktop.wave.prototype = {
     case 804:
       if (control) {
         scalar.ui.select(select+' div').className = 'icon-cloudy2';
+        scalar.ui.select(select+' .daily-weather-commend').innerHTML = "Hava kapalı olacak. Yağmur yağma ihtimaline karşı dikkatli olun.";
       }else {
         scalar.ui.select(select).className = 'icon-cloudy2';
       }
@@ -213,6 +226,7 @@ scalar.ui.desktop.wave.prototype = {
     case 321:
       if (control) {
         scalar.ui.select(select+' div').className = 'icon-rainy2';
+        scalar.ui.select(select+' .daily-weather-commend').innerHTML = "Hava kapalı. Aynı zamanda yağmurlu ve gökgürültülü olacak.";
       }else {
         scalar.ui.select(select).className = 'icon-rainy2';
       }
@@ -227,9 +241,10 @@ scalar.ui.desktop.wave.prototype = {
     case 522:
     case 531:
       if (control) {
-        scalar.ui.select(select+' div').className = 'icon-rainy';
+        scalar.ui.select(select+' div').className = 'icon-rainy2';
+        scalar.ui.select(select+' .daily-weather-commend').innerHTML = "Hava kapalı ve aynı zamanda yağmurlu olacak. Şemsiyenizi almayı unutmayın.";
       }else {
-        scalar.ui.select(select).className = 'icon-rainy';
+        scalar.ui.select(select).className = 'icon-rainy2';
       }
       break;
     case 200:
@@ -244,6 +259,7 @@ scalar.ui.desktop.wave.prototype = {
     case 232:
       if (control) {
         scalar.ui.select(select+' div').className = 'icon-lightning2';
+        scalar.ui.select(select+' .daily-weather-commend').innerHTML = "Hava kapalı ve gökgürültülü. Dışarıya çıkmak için iyi bir zaman olmayabilir.";
       }else {
         scalar.ui.select(select).className = 'icon-lightning2';
       }
@@ -261,6 +277,7 @@ scalar.ui.desktop.wave.prototype = {
     case 511:
       if (control) {
         scalar.ui.select(select+' div').className = 'icon-snowy3';
+        scalar.ui.select(select+' .daily-weather-commend').innerHTML = "Hava kar yağışlı. Eldivenlerinizi almayı unutmayın kartopu oynamak için iyi bir zaman.";
       }else {
         scalar.ui.select(select).className = 'icon-snowy3';
       }
@@ -277,6 +294,7 @@ scalar.ui.desktop.wave.prototype = {
     case 781:
       if (control) {
         scalar.ui.select(select+' div').className = 'icon-weather3';
+        scalar.ui.select(select+' .daily-weather-commend').innerHTML = "Hava sisli olacak. Araç kullanmak için iyi bir zaman değil, dikkatli olun.";
       }else {
         scalar.ui.select(select).className = 'icon-weather3';
       }
