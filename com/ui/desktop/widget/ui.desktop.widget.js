@@ -75,21 +75,29 @@ scalar.ui.desktop.widget.prototype = {
               'IMAGE': this.responseXML.getElementsByTagName(this.config.IMAGE)[i] ? this.responseXML.getElementsByTagName(this.config.IMAGE)[i].childNodes[0].nodeValue : ""
             });
           }
-
+          var i = 0;
+          var t = 0;
           for (k = 0; k < scalar.ui.desktop.widget.news.length; k++) {
-            if(scalar.ui.desktop.widget.news[k].TITLE){
+            if (scalar.ui.desktop.widget.news[k].TITLE) {
               scalar.ui.append('#widget-0 ul', scalar.ui.createElement('li', {
-                'id': 'li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER
+                'id': 'li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER + '--' + t
               }));
-              scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER, scalar.ui.createElement('a', {
+              scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER + '--' + t, scalar.ui.createElement('a', {
                 'href': "" + scalar.ui.desktop.widget.news[k].URL,
                 'target': '_blank'
               }));
-              scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER + ' a', scalar.ui.desktop.widget.news[k].TITLE);
-              scalar.ui.desktop.widget.news[k].IMAGE ? scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER, scalar.ui.createElement('div')) : false;
-              scalar.ui.desktop.widget.news[k].IMAGE ? scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER + ' div', scalar.ui.createElement('img', {'src': scalar.ui.desktop.widget.news[k].IMAGE})) : false;
-              scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER, scalar.ui.createElement('p'));
-              scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER + ' p', scalar.ui.desktop.widget.news[k].DESCRIPTION);
+              scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER + '--' + t + ' a', scalar.ui.desktop.widget.news[k].TITLE);
+              scalar.ui.desktop.widget.news[k].IMAGE ? scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER + '--' + t, scalar.ui.createElement('div')) : false;
+              scalar.ui.desktop.widget.news[k].IMAGE ? scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER + '--' + t + ' div', scalar.ui.createElement('img', {
+                'src': scalar.ui.desktop.widget.news[k].IMAGE
+              })) : false;
+              scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER + '--' + t, scalar.ui.createElement('p'));
+              scalar.ui.append('#widget-0 ul #li-' + k + '-' + scalar.ui.desktop.widget.config.COUNTER + '--' + t + ' p', scalar.ui.desktop.widget.news[k].DESCRIPTION);
+              i++
+              if (i == scalar.ui.desktop.widget.config.NEWS.SLIDER.LEN) {
+                t++;
+                i = 0;
+              }
             }
           }
 
@@ -103,7 +111,7 @@ scalar.ui.desktop.widget.prototype = {
     this.xml.send();
   },
   getFacebook: function() {
-     // This is called with the results from from FB.getLoginStatus().
+    // This is called with the results from from FB.getLoginStatus().
     function statusChangeCallback(response) {
       console.log('statusChangeCallback');
       console.log(response);
@@ -136,29 +144,29 @@ scalar.ui.desktop.widget.prototype = {
     }
 
     window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1840857556187692',
-      cookie     : false,  // enable cookies to allow the server to access 
-                          // the session
-      xfbml      : true,  // parse social plugins on this page
-      version    : 'v2.8' // use graph api version 2.8
-    });
+      FB.init({
+        appId: '1840857556187692',
+        cookie: false, // enable cookies to allow the server to access 
+        // the session
+        xfbml: true, // parse social plugins on this page
+        version: 'v2.8' // use graph api version 2.8
+      });
 
-    // Now that we've initialized the JavaScript SDK, we call 
-    // FB.getLoginStatus().  This function gets the state of the
-    // person visiting this page and can return one of three states to
-    // the callback you provide.  They can be:
-    //
-    // 1. Logged into your app ('connected')
-    // 2. Logged into Facebook, but not your app ('not_authorized')
-    // 3. Not logged into Facebook and can't tell if they are logged into
-    //    your app or not.
-    //
-    // These three cases are handled in the callback function.
+      // Now that we've initialized the JavaScript SDK, we call 
+      // FB.getLoginStatus().  This function gets the state of the
+      // person visiting this page and can return one of three states to
+      // the callback you provide.  They can be:
+      //
+      // 1. Logged into your app ('connected')
+      // 2. Logged into Facebook, but not your app ('not_authorized')
+      // 3. Not logged into Facebook and can't tell if they are logged into
+      //    your app or not.
+      //
+      // These three cases are handled in the callback function.
 
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
+      FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+      });
 
     };
 
@@ -166,7 +174,8 @@ scalar.ui.desktop.widget.prototype = {
     (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
+      js = d.createElement(s);
+      js.id = id;
       js.src = "https://connect.facebook.net/en_US/sdk.js";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
@@ -186,7 +195,12 @@ scalar.ui.desktop.widget.prototype = {
 scalar.ui.desktop.widget.config = {
   NEWS: {
     COUNT: 20,
-    RELOAD: 6000 * 10
+    POINTER: 0,
+    RELOAD: 6000 * 10,
+    SLIDER: {
+      LEN: 3,
+      TIME: 6000 * 10,
+    }
   },
   COUNTER: 0
 }

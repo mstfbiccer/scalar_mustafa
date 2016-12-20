@@ -1,5 +1,5 @@
 {
-  "SOURCE": "http://aa.com.tr/tr/rss/default?cat=guncel",
+  "SOURCE": "http://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
   "CONFIG": {
     "TITLE": "title",
     "DESCRIPTION": "description",
