@@ -102,6 +102,7 @@ scalar.ui.desktop.widget.prototype = {
           }
           for (i = 0; i < scalar.ui.selectAll('#widget-0 ul li').length; i++) {
             this.swp = scalar.ui.selectAll('#widget-0 ul li')[i];
+            scalar.ui.selectAll('#widget-0 ul li p a')[i].innerHTML = '';
             if(parseFloat(this.swp.getAttribute("id").split('--')[1])>0){
               this.swp.setAttribute("style","display:none");
             }
