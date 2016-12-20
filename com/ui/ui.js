@@ -19,7 +19,7 @@ scalar.ui.prototype = {
     if (this.attribute != undefined) {
       if (Object.keys(this.attribute).length) {
         Object.keys(this.attribute).indexOf("id") >= 0 ? this.htmlElement.id = this.attribute.id : undefined;
-        Object.keys(this.attribute).indexOf("class") >= 0 ? this.htmlElement.classList.add(this.attribute.class) : undefined;
+        Object.keys(this.attribute).indexOf("class") >= 0 ? this.htmlElement.setAttribute('class',this.attribute.class) : undefined;
         Object.keys(this.attribute).indexOf("src") >= 0 ? this.htmlElement.setAttribute("src", this.attribute.src) : undefined;
         Object.keys(this.attribute).indexOf("background") >= 0 ? this.htmlElement.style.background = this.attribute.background : undefined;
         Object.keys(this.attribute).indexOf("text") >= 0 ? this.htmlElement.innerHTML = this.attribute.text : undefined;
@@ -29,6 +29,7 @@ scalar.ui.prototype = {
         Object.keys(this.attribute).indexOf("target") >= 0 ? this.htmlElement.setAttribute("target", this.attribute.target) : undefined;
         Object.keys(this.attribute).indexOf("scope") >= 0 ? this.htmlElement.setAttribute("scope", this.attribute.scope) : undefined;
         Object.keys(this.attribute).indexOf("onlogin") >= 0 ? this.htmlElement.setAttribute("onlogin", this.attribute.onlogin) : undefined;
+        Object.keys(this.attribute).indexOf("onkeypress") >= 0 ? this.htmlElement.setAttribute("onkeypress", this.attribute.onkeypress) : undefined;
       }
     }
     return this.htmlElement;
@@ -51,7 +52,7 @@ scalar.ui = new scalar.ui();
 
 scalar.ui.append('body',scalar.ui.createElement('div',{'id':'desktop'}));
   scalar.ui.append('#desktop',scalar.ui.createElement('div',{'id':'wave'}));
-    scalar.ui.append('#wave',scalar.ui.createElement('input',{'id':'search','type':'text','placeholder':'Bilgisayarımda ara'}));
+    scalar.ui.append('#wave',scalar.ui.createElement('input',{'id':'search','type':'text','placeholder':'Bilgisayarımda ara','onkeypress':'return scalar.ui.desktop.wave.scalarOpen(event);'}));
     scalar.ui.append('#wave',scalar.ui.createElement('ul',{'id':'menu'}));
       scalar.ui.append('#menu',scalar.ui.createElement('li',{'id':'calendar'}));
         scalar.ui.append('#calendar',scalar.ui.createElement('div',{'id':'time'}));
@@ -118,6 +119,60 @@ scalar.ui.append('body',scalar.ui.createElement('div',{'id':'desktop'}));
         scalar.ui.append('#dc-4',scalar.ui.createElement('b'));
       scalar.ui.append('#dock-container',scalar.ui.createElement('span',{'id':'dc-5'}));
         scalar.ui.append('#dc-5',scalar.ui.createElement('b'));
+
+  scalar.ui.append('#desktop',scalar.ui.createElement('div',{'id':'celendar-detail'}));
+    scalar.ui.append('#celendar-detail',scalar.ui.createElement('div',{'id':'time-detail'}));
+      scalar.ui.append('#time-detail',scalar.ui.createElement('div',{'id':'time-detail-time'}));
+        scalar.ui.append('#time-detail-time',scalar.ui.createElement('div',{'id':'time-hm'}));
+        scalar.ui.append('#time-detail-time',scalar.ui.createElement('div',{'id':'time-dmy'}));
+      scalar.ui.append('#time-detail',scalar.ui.createElement('div',{'id':'time-detail-celendar'}));
+    scalar.ui.append('#celendar-detail',scalar.ui.createElement('div',{'id':'weather-detail'}));
+      scalar.ui.append('#weather-detail',scalar.ui.createElement('div',{'id':'daily-weather-0' , 'class':'daily-weather'}));
+        scalar.ui.append('#daily-weather-0',scalar.ui.createElement('div',{'class':'daily-weather-icon icon-cloudy'}));
+        scalar.ui.append('#daily-weather-0',scalar.ui.createElement('div',{'class':'daily-weather-status'}));
+          scalar.ui.append('#daily-weather-0 .daily-weather-status',scalar.ui.createElement('span',{'class':'daily-weather-date'}));
+          scalar.ui.append('#daily-weather-0 .daily-weather-status',scalar.ui.createElement('span',{'class':'daily-weather-commend'}));
+        scalar.ui.append('#daily-weather-0',scalar.ui.createElement('div',{'class':'daily-weather-degree'}));
+          scalar.ui.append('#daily-weather-0 .daily-weather-degree',scalar.ui.createElement('span'));
+          scalar.ui.append('#daily-weather-0 .daily-weather-degree',scalar.ui.createElement('div',{'class':'icon-Celsius'}));
+
+      scalar.ui.append('#weather-detail',scalar.ui.createElement('div',{'id':'daily-weather-1' , 'class':'daily-weather'}));
+      scalar.ui.append('#daily-weather-1',scalar.ui.createElement('div',{'class':'daily-weather-icon icon-cloudy'}));
+        scalar.ui.append('#daily-weather-1',scalar.ui.createElement('div',{'class':'daily-weather-status'}));
+          scalar.ui.append('#daily-weather-1 .daily-weather-status',scalar.ui.createElement('span',{'class':'daily-weather-date'}));
+          scalar.ui.append('#daily-weather-1 .daily-weather-status',scalar.ui.createElement('span',{'class':'daily-weather-commend'}));
+        scalar.ui.append('#daily-weather-1',scalar.ui.createElement('div',{'class':'daily-weather-degree'}));
+          scalar.ui.append('#daily-weather-1 .daily-weather-degree',scalar.ui.createElement('span'));
+          scalar.ui.append('#daily-weather-1 .daily-weather-degree',scalar.ui.createElement('div',{'class':'icon-Celsius'}));
+
+      scalar.ui.append('#weather-detail',scalar.ui.createElement('div',{'id':'daily-weather-2' , 'class':'daily-weather'}));
+      scalar.ui.append('#daily-weather-2',scalar.ui.createElement('div',{'class':'daily-weather-icon icon-cloudy'}));
+        scalar.ui.append('#daily-weather-2',scalar.ui.createElement('div',{'class':'daily-weather-status'}));
+          scalar.ui.append('#daily-weather-2 .daily-weather-status',scalar.ui.createElement('span',{'class':'daily-weather-date'}));
+          scalar.ui.append('#daily-weather-2 .daily-weather-status',scalar.ui.createElement('span',{'class':'daily-weather-commend'}));
+        scalar.ui.append('#daily-weather-2',scalar.ui.createElement('div',{'class':'daily-weather-degree'}));
+          scalar.ui.append('#daily-weather-2 .daily-weather-degree',scalar.ui.createElement('span'));
+          scalar.ui.append('#daily-weather-2 .daily-weather-degree',scalar.ui.createElement('div',{'class':'icon-Celsius'}));
+
+      scalar.ui.append('#weather-detail',scalar.ui.createElement('div',{'id':'daily-weather-3' , 'class':'daily-weather'}));
+      scalar.ui.append('#daily-weather-3',scalar.ui.createElement('div',{'class':'daily-weather-icon icon-cloudy'}));
+        scalar.ui.append('#daily-weather-3',scalar.ui.createElement('div',{'class':'daily-weather-status'}));
+          scalar.ui.append('#daily-weather-3 .daily-weather-status',scalar.ui.createElement('span',{'class':'daily-weather-date'}));
+          scalar.ui.append('#daily-weather-3 .daily-weather-status',scalar.ui.createElement('span',{'class':'daily-weather-commend'}));
+        scalar.ui.append('#daily-weather-3',scalar.ui.createElement('div',{'class':'daily-weather-degree'}));
+          scalar.ui.append('#daily-weather-3 .daily-weather-degree',scalar.ui.createElement('span'));
+          scalar.ui.append('#daily-weather-3 .daily-weather-degree',scalar.ui.createElement('div',{'class':'icon-Celsius'}));
+
+      scalar.ui.append('#weather-detail',scalar.ui.createElement('div',{'id':'daily-weather-4' , 'class':'daily-weather'}));
+      scalar.ui.append('#daily-weather-4',scalar.ui.createElement('div',{'class':'daily-weather-icon icon-cloudy'}));
+        scalar.ui.append('#daily-weather-4',scalar.ui.createElement('div',{'class':'daily-weather-status'}));
+          scalar.ui.append('#daily-weather-4 .daily-weather-status',scalar.ui.createElement('span',{'class':'daily-weather-date'}));
+          scalar.ui.append('#daily-weather-4 .daily-weather-status',scalar.ui.createElement('span',{'class':'daily-weather-commend'}));
+        scalar.ui.append('#daily-weather-4',scalar.ui.createElement('div',{'class':'daily-weather-degree'}));
+          scalar.ui.append('#daily-weather-4 .daily-weather-degree',scalar.ui.createElement('span'));
+          scalar.ui.append('#daily-weather-4 .daily-weather-degree',scalar.ui.createElement('div',{'class':'icon-Celsius'}));
+
+    scalar.ui.append('#celendar-detail',scalar.ui.createElement('div',{'id':'celendar-close'}));
 
 
 scalar.exec('echo "$USER"', function(output) {console.log(output)})
