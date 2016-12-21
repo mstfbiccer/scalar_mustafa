@@ -104,6 +104,20 @@ scalar.ui.desktop.wave = function() {
       }
     }catch(err) {}
   }
+  this.scalarDirekt= function (url) {
+    try {
+      if(this.scalarBrowser!=undefined && this.scalarBrowser.closed==="false") {
+          this.scalarBrowser.location="//"+url;
+          this.scalarBrowser.focus();
+          this.scalarBrowser.eval("document.querySelector('.StreamsHero-header').setAttribute('onclick','window.close()')");
+
+      }else {
+          this.scalarBrowser=window.open("//"+url);
+          this.scalarBrowser.focus();
+          this.scalarBrowser.eval("this.h = document.createElement('div');this.h.id = 'node-scalar';this.h.setAttribute('onclick','window.close()');this.h.setAttribute('style','cursor:pointer;background:Red;width:100px;height:100px;position:fixed;left:10px;top:10px;z-index:9999');document.body.appendChild(this.h)");
+      }
+    }catch(err) {}
+  }
 }
 
 scalar.ui.desktop.wave.prototype = {

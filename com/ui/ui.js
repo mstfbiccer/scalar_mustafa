@@ -35,6 +35,7 @@ scalar.ui.prototype = {
         Object.keys(this.attribute).indexOf("frameborder") >= 0 ? this.htmlElement.setAttribute("frameborder", this.attribute.frameborder) : undefined;
         Object.keys(this.attribute).indexOf("allowtransparency") >= 0 ? this.htmlElement.setAttribute("allowtransparency", this.attribute.allowtransparency) : undefined;
         Object.keys(this.attribute).indexOf("style") >= 0 ? this.htmlElement.setAttribute("style", this.attribute.style) : undefined;
+        Object.keys(this.attribute).indexOf("onclick") >= 0 ? this.htmlElement.setAttribute("onclick", this.attribute.onclick) : undefined;
       }
     }
     return this.htmlElement;
@@ -115,15 +116,15 @@ scalar.ui.append('body',scalar.ui.createElement('div',{'id':'desktop'}));
   scalar.ui.append('#desktop',scalar.ui.createElement('div',{'id':'dock'}));
     scalar.ui.append('#dock',scalar.ui.createElement('div',{'id':'dock-container'}));
       scalar.ui.append('#dock-container',scalar.ui.createElement('span',{'id':'dc-1'}));
-        scalar.ui.append('#dc-1',scalar.ui.createElement('b'));
+        scalar.ui.append('#dc-1',scalar.ui.createElement('b',{'style':'background:url(com/ui/desktop/dock/icons/youtube.png)','onclick':'scalar.ui.desktop.wave.scalarDirekt("youtube.com");'}));
       scalar.ui.append('#dock-container',scalar.ui.createElement('span',{'id':'dc-2'}));
-        scalar.ui.append('#dc-2',scalar.ui.createElement('b'));
+        scalar.ui.append('#dc-2',scalar.ui.createElement('b',{'style':'background:url(com/ui/desktop/dock/icons/google.png)','onclick':'scalar.ui.desktop.wave.scalarDirekt("google.com");'}));
       scalar.ui.append('#dock-container',scalar.ui.createElement('span',{'id':'dc-3'}));
-        scalar.ui.append('#dc-3',scalar.ui.createElement('b'));
+        scalar.ui.append('#dc-3',scalar.ui.createElement('b',{'style':'background:url(com/ui/desktop/dock/icons/instagram.png)','onclick':'scalar.ui.desktop.wave.scalarDirekt("instagram.com");'}));
       scalar.ui.append('#dock-container',scalar.ui.createElement('span',{'id':'dc-4'}));
-        scalar.ui.append('#dc-4',scalar.ui.createElement('b'));
+        scalar.ui.append('#dc-4',scalar.ui.createElement('b',{'style':'background:url(com/ui/desktop/dock/icons/pinterest.png)','onclick':'scalar.ui.desktop.wave.scalarDirekt("pinterest.com");'}));
       scalar.ui.append('#dock-container',scalar.ui.createElement('span',{'id':'dc-5'}));
-        scalar.ui.append('#dc-5',scalar.ui.createElement('b'));
+        scalar.ui.append('#dc-5',scalar.ui.createElement('b',{'style':'background:url(com/ui/desktop/dock/icons/netflix.png)','onclick':'scalar.ui.desktop.wave.scalarDirekt("netflix.com");'}));
 
   scalar.ui.append('#desktop',scalar.ui.createElement('div',{'id':'celendar-detail'}));
     scalar.ui.append('#celendar-detail',scalar.ui.createElement('div',{'id':'time-detail'}));
