@@ -15,8 +15,7 @@ const express = require('./myserver');
    win = new BrowserWindow({
      width: 1280,
      height: 720,
-     transparent: true,
-     frame: true,
+     frame: true
      //fullscreen:true
    })
    // and load the index.html of the app.
