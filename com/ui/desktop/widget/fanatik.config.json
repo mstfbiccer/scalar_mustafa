@@ -1,9 +1,0 @@
-{
-  "SOURCE": "http://www.fotomac.com.tr/rss/Futbol.xml",
-  "CONFIG": {
-    "TITLE": "title",
-    "DESCRIPTION": "description",
-    "URL": "link",
-    "RELOAD": 60000
-  }
-}

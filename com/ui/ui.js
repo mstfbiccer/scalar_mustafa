@@ -1,14 +1,7 @@
 scalar.ui = function() {
   this.config = scalar.ui.config;
 
-  scalar.init(scalar.lib.COMPONENT);
-  scalar.init(scalar.lib.DESKTOP);
-  scalar.init(scalar.lib.DOCK);
-  scalar.init(scalar.lib.WAVE);
-  scalar.init(scalar.lib.SEARCH);
-  scalar.init(scalar.lib.WIDGET);
-  scalar.init(scalar.lib.WINDOW);
-  scalar.init(scalar.lib.UI_FONT);
+  scalar.init(scalar.lib.LAUNCHER);
   
 }
 scalar.ui.config = {};
@@ -56,22 +49,4 @@ scalar.ui.prototype = {
 scalar.ui = new scalar.ui();
 
 
-scalar.ui.append('body',scalar.ui.createElement('div',{'id':'desktop'}));
- 
-
-  scalar.ui.append('#desktop',scalar.ui.createElement('div',{'id':'dock'}));
-    scalar.ui.append('#dock',scalar.ui.createElement('div',{'id':'dock-container'}));
-      scalar.ui.append('#dock-container',scalar.ui.createElement('span',{'id':'dc-1'}));
-        scalar.ui.append('#dc-1',scalar.ui.createElement('b',{'style':'background:url(com/ui/desktop/dock/icons/youtube.png)','onclick':'scalar.ui.desktop.wave.scalarDirekt("youtube.com");'}));
-      scalar.ui.append('#dock-container',scalar.ui.createElement('span',{'id':'dc-2'}));
-        scalar.ui.append('#dc-2',scalar.ui.createElement('b',{'style':'background:url(com/ui/desktop/dock/icons/google.png)','onclick':'scalar.ui.desktop.wave.scalarDirekt("google.com");'}));
-      scalar.ui.append('#dock-container',scalar.ui.createElement('span',{'id':'dc-3'}));
-        scalar.ui.append('#dc-3',scalar.ui.createElement('b',{'style':'background:url(com/ui/desktop/dock/icons/instagram.png)','onclick':'scalar.ui.desktop.wave.scalarDirekt("instagram.com");'}));
-      scalar.ui.append('#dock-container',scalar.ui.createElement('span',{'id':'dc-4'}));
-        scalar.ui.append('#dc-4',scalar.ui.createElement('b',{'style':'background:url(com/ui/desktop/dock/icons/pinterest.png)','onclick':'scalar.ui.desktop.wave.scalarDirekt("pinterest.com");'}));
-      scalar.ui.append('#dock-container',scalar.ui.createElement('span',{'id':'dc-5'}));
-        scalar.ui.append('#dc-5',scalar.ui.createElement('b',{'style':'background:url(com/ui/desktop/dock/icons/netflix.png)','onclick':'scalar.ui.desktop.wave.scalarDirekt("netflix.com");'}));
-
- 
-
-$ = scalar.ui;
+scalar.ui.append('body',scalar.ui.createElement('div',{'id':'launcher'}));
