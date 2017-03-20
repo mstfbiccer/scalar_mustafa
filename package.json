@@ -1,5 +1,14 @@
 {
-  "name": "Scalar",
-  "version": "0.0.1",
-  "main": "main.js"
+  "name": "scalar",
+  "description": "Scalar Launcher",
+  "version": "0.0.2",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "license": "GNU",
+  "author": "Turtles",
+  "dependencies": {
+    "electron": "^1.4.1"
+  }
 }
