@@ -3,17 +3,17 @@
  * @param  {object} object [scalar.lib]
  * @return {bool}
  */
-scalar.init = function(object) {
+scalar.init = function (object) {
   this.config = scalar.init.config;
   try {
-    if(object.TYPE=='text/css'){
+    if (object.TYPE == 'text/css') {
       this.htmlElement = document.createElement(object.ELEMENT);
       this.htmlElement.type = object.TYPE;
       this.htmlElement.href = object.SRC;
       this.htmlElement.rel = 'stylesheet';
       document.head.appendChild(this.htmlElement);
       scalar.log.success.push('Initialization complete : [' + object.SRC + ']');
-    }else{
+    } else {
       this.htmlElement = document.createElement(object.ELEMENT);
       this.htmlElement.type = object.TYPE;
       this.htmlElement.src = object.SRC;
@@ -33,45 +33,10 @@ scalar.lib = {
     TYPE: "text/javascript",
     SRC: "com/ui/ui.js"
   },
-  COMPONENT: {
+  LAUNCHER: {
     ELEMENT: 'script',
     TYPE: "text/javascript",
-    SRC: "com/ui/component/ui.component.js"
-  },
-  DESKTOP: {
-    ELEMENT: 'script',
-    TYPE: "text/javascript",
-    SRC: "com/ui/desktop/ui.desktop.js"
-  },
-  WINDOW: {
-    ELEMENT: 'script',
-    TYPE: "text/javascript",
-    SRC: "com/ui/window/ui.window.js"
-  },
-  WAVE: {
-    ELEMENT: 'script',
-    TYPE: "text/javascript",
-    SRC: "com/ui/desktop/wave/ui.desktop.wave.js"
-  },
-  DOCK: {
-    ELEMENT: 'script',
-    TYPE: "text/javascript",
-    SRC: "com/ui/desktop/dock/ui.desktop.dock.js"
-  },
-  SEARCH: {
-    ELEMENT: 'script',
-    TYPE: "text/javascript",
-    SRC: "com/ui/desktop/search/ui.desktop.search.js"
-  },
-  WIDGET: {
-    ELEMENT: 'script',
-    TYPE: "text/javascript",
-    SRC: "com/ui/desktop/widget/ui.desktop.widget.js"
-  },
-  UI_FONT: {
-    ELEMENT: 'link',
-    TYPE: "text/css",
-    SRC: "com/ui/stylesheet/font.css"
+    SRC: "com/ui/launcher/ui.launcher.js"
   }
 }
 
