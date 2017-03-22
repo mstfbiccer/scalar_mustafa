@@ -2,7 +2,6 @@ scalar.ui = function() {
   this.config = scalar.ui.config;
 
   scalar.init(scalar.lib.LAUNCHER);
-  
 }
 scalar.ui.config = {};
 scalar.ui.prototype = {
@@ -50,3 +49,4 @@ scalar.ui = new scalar.ui();
 
 
 scalar.ui.append('body',scalar.ui.createElement('div',{'id':'launcher'}));
+
